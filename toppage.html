@@ -22,6 +22,41 @@
     </header>
 
 
+<div class="date-selector">
+    <input type="date" class="date-selector__input" id="dateInput">
+    <div class="date-selector__calendar" id="calendar"></div>
+</div>
+    
+
+
+<!-- <div class="clock">
+        <div id="clockDisplay"></div>
+</div> -->
+
+<div class="clock-container">
+    <div class="clock" id="clockDisplay"></div>
+</div>      
+
+
+
+
+<!-- 天気風ガジェット -->
+<div class="gadget">
+    <div class="gadget__header">
+        <h2 class="gadget__title">天気ガジェット</h2>
+    </div>
+    <div class="gadget__content">
+        <div class="weather">
+            <h3 class="weather__title">東京の天気</h3>
+            <div class="weather__icon"></div>
+            <p class="weather__temperature">気温: <span id="temperature"></span></p>
+            <p class="weather__condition">状態: <span id="condition"></span></p>
+        </div>
+    </div>
+</div>
+
+
+
 
     <section class="main-content">
         <article>
@@ -77,5 +112,7 @@
             <div class="block"></div>
         </div>
     </div>
+    <script src="js/clocktime.js"></script>
+
 </body>
 </html>
