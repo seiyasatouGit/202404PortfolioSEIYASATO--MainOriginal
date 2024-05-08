@@ -32,6 +32,26 @@
 import msvcrt
 import os
 
+# ファイルの読み込み
+with open("example.txt", "r") as file:
+    content = file.read()
+    print("ファイルの内容:", content)
+
+# ファイルの書き込み
+with open("example.txt", "w") as file:
+    file.write("Hello, World!")
+
+
+    # ファイルの読み込み（バイナリモード）
+with open("binary_data.bin", "rb") as file:
+    binary_content = file.read()
+    print("バイナリデータ:", binary_content)
+
+
+
+
+
+
 # ファイルを開く
 file_path = 'test.txt'
 file_handle = os.open(file_path, os.O_RDWR)
@@ -46,3 +66,15 @@ msvcrt.locking(file_handle, msvcrt.LK_UNLCK, 0)
 
 # ファイルを閉じる
 os.close(file_handle)
+
+
+
+
+
+
+import msvcrt
+
+# バイナリデータの読み込み
+binary_data = msvcrt.getch()
+print("読み込まれたバイナリデータ:", binary_data)
+
