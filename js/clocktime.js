@@ -26,6 +26,12 @@ calendarHTML += '</table>';
 calendarContainer.innerHTML = calendarHTML;
 
 
+// カレンダーをページに追加
+calendarContainer.innerHTML = calendarHTML;
+
+// 今日の日付を表示する
+document.getElementById('dateInput').value = today;
+
 
 
 

@@ -1,0 +1,45 @@
+.footer {
+    background-color: #f5f5f5; /* グレー系の優しい色味 */
+    padding: 20px;
+    text-align: center;
+}
+
+.footer__contact {
+    margin-bottom: 20px;
+}
+
+.footer__contact-inner {
+    display: inline-block;
+    background-color: #ffffff; /* 白色の背景 */
+    padding: 10px 20px;
+    border-radius: 5px;
+    border:  solid 1px  #666666;
+}
+
+.footer__contact-title {
+    margin: 0;
+    color: #666666; /* グレー系の優しい色味 */
+    
+}
+
+.footer__columns {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    
+}
+
+.footer__column {
+    flex: 1;
+    height: 160px;
+    background-color: #ffffff; /* 白色の背景 */
+    border-radius: 5px;
+    border:  solid 1px  #b3b1b1;
+}
+
+/* レスポンシブ対応 */
+@media screen and (max-width: 768px) {
+    .footer__columns {
+        flex-direction: column;
+    }
+}

@@ -24,8 +24,30 @@ nav ul li a {
 
 
 
+
+/* headerした囲んだ箱 */
+.header-content {
+  display: flex;
+  /* flex-wrap: wrap; */
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1200px; /* 必要に応じて最大幅を調整 */
+  padding: 20px; /* 必要に応じて余白を調整 */
+
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .header-content {
+      flex-direction: column; /* 小さい画面サイズでは縦方向に並べる */
+  }
+}
+
+
+
 /* カレンダー */
-  .date-selector {
+  .header-content__date-selector {
     width: 180px;
     height: 180px;
     border: 1px solid #ccc;
@@ -45,7 +67,10 @@ nav ul li a {
     overflow: auto;
 }
 
-
+/* その日の日付に、オレンジ色を付ける。 */
+.today {
+  background-color: orange;
+}
 
 
   /* .clock {
@@ -63,7 +88,7 @@ nav ul li a {
   /* height: 80px; */
   /* } */
   
-  .clock-container {
+  .header-content__clock-container {
     /* position: fixed;
     top: 0;
     left: 0; */
@@ -84,8 +109,8 @@ nav ul li a {
   }
 
 /* 天気風ガジェット */
-.gadget {
-    width: 300px;
+.header-content__gadget {
+    width: 180px;
     background-color: #f2f2f2;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -96,7 +121,7 @@ nav ul li a {
 .gadget__header {
     background-color: #333;
     color: #fff;
-    padding: 10px;
+    padding: 6px;
 }
 
 .gadget__title {
@@ -112,8 +137,8 @@ nav ul li a {
 }
 
 .weather__icon {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     background-color: #fff; /* ここに天気アイコンの背景色や画像を設定 */
     margin: 0 auto 10px;
 }
@@ -124,7 +149,19 @@ nav ul li a {
 }
 
 
+/* 自己紹介 */
+.profile {
+  text-align: right;
+  background-color: #333;
+  border: #333 solid 3px;
+}
 
+
+
+
+
+
+/*  */
  .main-content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -148,9 +185,17 @@ nav ul li a {
     flex-direction: column;
     align-items: center;
 }
+
+
 .block {
-    width: 3cm;
-    height: 3cm;
-    background-color: lightblue;
-    margin-bottom: 3cm;
+  width: 3cm;
+  height: 3cm;
+  background-color: #9bdaf1; /* グミのような色に設定 */
+  margin-bottom: 3cm;
+  border-radius: 10px; /* 角を少し丸くする */
+  transition: transform 0.2s ease-in-out; /* アニメーションの設定 */
+}
+
+.block--hover {
+  transform: rotate(2deg) scale(1.05); /* ポインターを当てると少し揺れる */
 }

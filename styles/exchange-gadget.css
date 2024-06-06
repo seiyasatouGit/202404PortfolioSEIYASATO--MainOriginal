@@ -1,0 +1,47 @@
+/* ガジェット */
+.header-content__exchange-gadget {
+    width: 180px;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+
+}
+
+.exchange-gadget__header {
+    background-color: #333;
+    color: #fff;
+    padding: 6px;
+}
+
+.exchange-gadget__title {
+    margin: 0;
+    text-align: center;
+}
+
+.exchange-gadget__content {
+    padding: 20px;
+}
+
+.exchange-gadget__currency {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.exchange-gadget__label {
+    font-weight: bold;
+    color: #666;
+}
+
+.exchange-gadget__rate {
+    font-size: 1.2em;
+    color: #333;
+}
+
+/* レスポンシブ対応 */
+@media screen and (max-width: 768px) {
+    .exchange-gadget {
+        width: 100%;
+    }
+}

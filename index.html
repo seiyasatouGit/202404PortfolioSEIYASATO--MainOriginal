@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PortfolioSEIYASATO</title>
+    <link rel="stylesheet" href="styles/exchange-gadget.css">
+    <link rel="stylesheet" href="css/mv.css">
+    <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -22,38 +25,89 @@
     </header>
 
 
-<div class="date-selector">
-    <input type="date" class="date-selector__input" id="dateInput">
-    <div class="date-selector__calendar" id="calendar"></div>
-</div>
-    
+<!-- Headers下の囲んだ箱。  -->
+<div class="header-content">
 
-
-<!-- <div class="clock">
-        <div id="clockDisplay"></div>
-</div> -->
-
-<div class="clock-container">
-    <div class="clock" id="clockDisplay"></div>
-</div>      
-
-
-
-
-<!-- 天気風ガジェット -->
-<div class="gadget">
-    <div class="gadget__header">
-        <h2 class="gadget__title">天気ガジェット</h2>
+    <!-- カレンダー -->
+    <div class="header-content__date-selector">
+        <input type="date" class="date-selector__input" id="dateInput">
+        <div class="date-selector__calendar" id="calendar"></div>
     </div>
-    <div class="gadget__content">
-        <div class="weather">
-            <h3 class="weather__title">東京の天気</h3>
-            <div class="weather__icon"></div>
-            <p class="weather__temperature">気温: <span id="temperature"></span></p>
-            <p class="weather__condition">状態: <span id="condition"></span></p>
+        
+    
+    
+    <!-- 時計 -->
+    <!-- <div class="clock">
+            <div id="clockDisplay"></div>
+    </div> -->
+    
+    <div class="header-content__clock-container">
+        <div class="clock" id="clockDisplay"></div>
+    </div>
+    
+    
+    
+    
+    <!-- 天気風ガジェット -->
+    <div class="header-content__gadget">
+        <div class="gadget__header">
+            <h2 class="gadget__title">天気ガジェット</h2>
+        </div>
+        <div class="gadget__content">
+            <div class="weather">
+                <h3 class="weather__title">東京の天気</h3>
+                <div class="weather__icon"></div>
+                <p class="weather__temperature">気温: <span id="temperature"></span></p>
+                <p class="weather__condition">状態: <span id="condition"></span></p>
+            </div>
         </div>
     </div>
+    
+    
+    <!-- 為替ガジェット -->
+    <div class="header-content__exchange-gadget">
+        <div class="exchange-gadget__header">
+            <h2 class="exchange-gadget__title">為替ガジェット</h2>
+        </div>
+        <div class="exchange-gadget__content">
+            <div class="exchange-gadget__currency">
+                <p class="exchange-gadget__label">USD/JPY</p>
+                <p class="exchange-gadget__rate" id="usd-jpy">Loading...</p>
+            </div>
+            <div class="exchange-gadget__currency">
+                <p class="exchange-gadget__label">EUR/JPY</p>
+                <p class="exchange-gadget__rate" id="eur-jpy">Loading...</p>
+            </div>
+            <div class="exchange-gadget__currency">
+                <p class="exchange-gadget__label">GBP/JPY</p>
+                <p class="exchange-gadget__rate" id="gbp-jpy">Loading...</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- header下、自己紹介とプロフィール -->
+    <div class="profile">
+        <p class="profile__name">名前:佐藤</p>
+        <p class="profile__intro">自己紹介:
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi nihil adipisci eius ducimus, alias tenetur reprehenderit voluptas aut iure eveniet ab illo veritatis voluptatem blanditiis voluptatibus iste totam pariatur dolorum.
+        </p>
+        <p class="profile__note">補足</p>
+    </div>
+
 </div>
+
+
+
+
+<!-- MV 朝昼夜 -->
+<div class="mv-container">
+    <div class="mv-container__top-section">
+        <h1 class="mv-container__title">Welcome(MV)</h1>
+        <p class="mv-container__description">This is the top section</p>
+    </div>
+</div>
+
 
 
 
@@ -77,12 +131,13 @@
 
 
 
+      <h2>制作</h2>
     <div class="container">
         <div class="column">
             <!-- Column 1 -->
-            <div class="block"></div>
-            <div class="block"></div>
-            <div class="block"></div>
+            <div class="block">HTML</div>
+            <div class="block">CSS</div>
+            <div class="block">Vue</div>
             <div class="block"></div>
             <div class="block"></div>
             <div class="block"></div>
@@ -112,7 +167,33 @@
             <div class="block"></div>
         </div>
     </div>
-    <script src="js/clocktime.js"></script>
+    
 
+
+
+
+    <footer class="footer">
+        <div class="footer__contact">
+            <div class="footer__contact-inner">
+                <p class="footer__contact-title">お問合せ</p>
+            </div>
+        </div>
+        <div class="footer__columns">
+            <div class="footer__column"></div>
+            <div class="footer__column"></div>
+            <div class="footer__column">統計</div>
+        </div>
+        <div class="footer__columns">
+            <div class="footer__column">設計書　例</div>
+            <div class="footer__column">仕様書　例</div>
+            <div class="footer__column">フレームワーク　図形</div>
+        </div>
+    </footer>
+    
+
+    <script src="js/clocktime.js"></script>
+    <script src="scripts/exchange-gadget.js"></script>
+    <script src="js/movie.js"></script>
+    <script src="js/block.js"></script>
 </body>
 </html>
