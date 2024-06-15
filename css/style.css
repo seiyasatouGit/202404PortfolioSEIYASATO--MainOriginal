@@ -1,16 +1,44 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
     margin: 0;
-    padding: 0;
+    /* padding: 0; */
     font-family: Arial, sans-serif;
+
+
+    /* 追加 */
+    background-color: #f5f5f5;
+    /* padding: 20px; */
+    padding: 0;
 }
 header {
     text-align: center;
     padding: 20px;
     background-color: #333;
     color: #fff;
+
+    padding: 10px 0;
 }
+
+
+header h1 {
+  margin: 0;
+}
+
 nav ul {
     list-style-type: none;
+
+
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
   }
   
   nav ul li {
@@ -25,29 +53,97 @@ nav ul li a {
 
 
 
-/* headerした囲んだ箱 */
-.header-content {
+
+/* ガジェット箱と自己紹介箱を囲んだ「箱」 */
+  .card__aside {
   display: flex;
-  /* flex-wrap: wrap; */
-  flex-direction: column;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  /* flex-direction: column; */
+  /* justify-content: space-between; */
+  background-color: #fff;
   margin: 0 auto;
   max-width: 1200px; /* 必要に応じて最大幅を調整 */
   padding: 20px; /* 必要に応じて余白を調整 */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  gap: 20px;
 
 }
 
-/* レスポンシブ対応 */
-@media (max-width: 768px) {
-  .header-content {
-      flex-direction: column; /* 小さい画面サイズでは縦方向に並べる */
-  }
+/* ガジェット側   */  /* 自己紹介側*/
+.card__aside-left-colum,  .card__aside-right-column{
+  flex: 1;
+  /* padding: 20px; */
+
+  min-width: 300px;
+
 }
+
+/* ガジェットタイトル */
+.card__aside-title {
+  /* font-size: 24px; */
+  /* margin-bottom: 20px; */
+
+
+  font-size: 1.2rem;
+  margin: 0 0 10px;
+}
+/* カレンダー */
+.date-selector {
+  margin-bottom: 20px;
+  width: 180px;
+  height: 180px;
+  border: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+
+/* 為替ガジェット */
+.exchange-gadget__currency {
+  margin-bottom: 10px;
+}
+
+.exchange-gadget__label {
+  font-size: 16px;
+}
+
+.exchange-gadget__rate {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* 自己紹介の場 */
+.content-section__name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.content-section__intro {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.content-section__note {
+  /* font-size: 14px; */
+  color: #555;
+
+  font-size: 1.2rem;
+  margin: 0 0 10px;
+}
+
+
+
 
 
 
 /* カレンダー */
-  .header-content__date-selector {
+.date-selector {
     width: 180px;
     height: 180px;
     border: 1px solid #ccc;
@@ -58,13 +154,13 @@ nav ul li a {
 }
 
 .date-selector__input {
-    margin-bottom: 10px;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
 }
 
-.date-selector__calendar {
-    width: 100%;
-    height: 100%;
-    overflow: auto;
+.clock-container {
+  margin-bottom: 20px;
 }
 
 /* その日の日付に、オレンジ色を付ける。 */
@@ -73,94 +169,145 @@ nav ul li a {
 }
 
 
-  /* .clock {
-    position: fixed;
-    top: 50px;
-    left: 50px;
-    background-color: #fff;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 18px; */
-      /* 大きさを自動的に調整 */
-  /* width: 80px; */
-  /* height: auto; */
-  /* height: 80px; */
-  /* } */
-  
-  .header-content__clock-container {
-    /* position: fixed;
-    top: 0;
-    left: 0; */
-    width: 100%;
-    height: 50%;
-    overflow: hidden;
-    display: flex;
-    justify-content: left;
-    align-items: flex-end; /* 要素を下端に配置 */
-    transform: scaleY(); /* Y軸を中心に反転 */
-  }
-  .clock {
-    background-color: #fff;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 18px;
-  }
+/* 時計ガジェット */
+.clock-container {
+  margin-bottom: 20px;
+}
+.clock {
+  font-size: 32px;
+  text-align: center;
+}
 
 /* 天気風ガジェット */
-.header-content__gadget {
-    width: 180px;
-    background-color: #f2f2f2;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    overflow: hidden;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+.content-section {
+  /* width: 180px; */
+  margin-bottom: 20px;
+  overflow: hidden;
+  /* margin: 0 auto; */
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0px 0px 15px -5px #777777;;
 }
 
-.gadget__header {
-    background-color: #333;
-    color: #fff;
-    padding: 6px;
+.content-section__header {
+  margin-bottom: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: #3f3d3d;
+  /* margin: 0 auto; */
+  color: #e9e5e5;
+  text-align: center;
 }
 
-.gadget__title {
-    margin: 0;
+.content-section__title {
+  font-size: 20px;
+  font-weight: bold;
+  
 }
 
-.gadget__content {
-    padding: 20px;
-}
+.weather__title {
+  /* font-size: 18px; */
+  margin-bottom: 10px;
+  text-align: center;
 
-.weather {
-    text-align: center;
+  font-size: 1.2rem;
+  margin: 0 0 10px;
+  
 }
 
 .weather__icon {
-    width: 80px;
-    height: 80px;
-    background-color: #fff; /* ここに天気アイコンの背景色や画像を設定 */
-    margin: 0 auto 10px;
+  width: 50px;
+  height: 50px;
+  background-color: #e7cfa3;
+  margin-bottom: 10px;
+  margin: 0 auto;
 }
 
-.weather__temperature,
-.weather__condition {
-    margin: 5px 0;
+.weather__temperature, .weather__condition {
+  font-size: 16px;
+  text-align: center;
+  margin-top: 3px;
+  margin-bottom: 2px;
 }
+
+
+
+
+
+
+
+/* 天気予測Python  */
+.weathercontainer {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.chart {
+  /* width: 100%; */
+  width: 180px;
+  height: 180px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+}
+
+.data-point {
+  fill: blue;
+}
+
+.predicted-line {
+  fill: none;
+  stroke: red;
+  stroke-width: 2;
+  stroke-dasharray: 5;
+}
+
+
+
+
 
 
 /* 自己紹介 */
 .profile {
-  text-align: right;
-  background-color: #333;
-  border: #333 solid 3px;
+  text-align: left;
+  background-color: #2b2a2a;
+  border: #b9b3b3 solid 3px;
+  /* color: #ebe9e9e8; */
+  /* font-family: fantasy; */
+  padding-left: 5px;
+}
+
+/* 名前 */
+.profile__name,
+/* 自己紹介欄 */
+.profile__intro,
+/* 補足 */
+.profile__note {
+    color: #ebe9e9e8;
+    font-family: fantasy;
+}
+
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .header-content {
+      flex-direction: column; /* 小さい画面サイズでは縦方向に並べる */
+  }
 }
 
 
 
 
 
+/* ----------------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------------- */
 
+
+
+
+/* sakuhinn 実績　Portfolio */
 /*  */
  .main-content {
     display: grid;
@@ -179,11 +326,16 @@ nav ul li a {
     align-items: flex-start;
     gap: 3cm;
     margin-top: 20px; /* 上部のマージンを追加 */
+
+    width: 100%;
 }
 .column {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 10%;
+
+    gap: 10px;
 }
 
 
@@ -198,4 +350,10 @@ nav ul li a {
 
 .block--hover {
   transform: rotate(2deg) scale(1.05); /* ポインターを当てると少し揺れる */
+}
+
+
+.block a {
+  text-decoration: none;
+  color: #333;
 }

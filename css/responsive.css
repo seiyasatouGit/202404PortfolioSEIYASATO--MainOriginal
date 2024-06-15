@@ -1,0 +1,27 @@
+/* Responsive Styles */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    .mv-container__title {
+        font-size: 1.5rem;
+    }
+
+    .portfolio__container {
+        flex-direction: column;
+    }
+
+    .footer__columns {
+        /* flex-direction: column; */
+    }
+
+    .card__aside {
+        flex-direction: column;
+    }
+
+    .card__aside-left-column,
+    .card__aside-right-column {
+        width: 100%;
+    }
+}

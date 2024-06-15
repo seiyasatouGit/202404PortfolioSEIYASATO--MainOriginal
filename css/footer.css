@@ -2,10 +2,19 @@
     background-color: #f5f5f5; /* グレー系の優しい色味 */
     padding: 20px;
     text-align: center;
+
+
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    gap: 20px;
 }
 
 .footer__contact {
     margin-bottom: 20px;
+
+
+    flex: 1;
+    min-width: 300px;
 }
 
 .footer__contact-inner {
@@ -22,10 +31,17 @@
     
 }
 
+.footer__contact-title a {
+    /* color: #fff; */
+}
+
+
 .footer__columns {
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
+
+    gap: 20px;
     
 }
 

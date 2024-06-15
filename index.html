@@ -6,8 +6,12 @@
     <title>PortfolioSEIYASATO</title>
     <link rel="stylesheet" href="styles/exchange-gadget.css">
     <link rel="stylesheet" href="css/mv.css">
+    <link rel="stylesheet" href="css/portfoliowork.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="styles/responsive.css"> <!-- レスポンシブスタイルを追加 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.12.3/jquery.min.js"></script>
 </head>
 <body>
     <header>
@@ -15,7 +19,7 @@
 
         <nav>
             <ul>
-              <li><a href="#">Home</a></li>
+              <li><a href="index.html">Home</a></li>
               <li><a href="#">News</a></li>
               <li><a href="#">Features</a></li>
               <li><a href="#">Opinion</a></li>
@@ -24,76 +28,130 @@
           </nav>
     </header>
 
-    
+
 
 <!-- Headers下の囲んだ箱。  -->
-<div class="header-content">
-
-    <!-- カレンダー -->
-    <div class="header-content__date-selector">
-        <input type="date" class="date-selector__input" id="dateInput">
-        <div class="date-selector__calendar" id="calendar"></div>
-    </div>
+<div class="card__aside">
+    <div class="card__aside-left-column">
+        <p class="card__aside-title">ガジェット</p>
         
-    
-    
-    <!-- 時計 -->
-    <!-- <div class="clock">
-            <div id="clockDisplay"></div>
+        <!-- カレンダー -->
+        <div class="date-selector">
+            <input type="date" class="date-selector__input" id="dateInput">
+            <div class="date-selector__calendar" id="calendar"></div>
+        </div>
+            
+        
+        
+        <!-- 時計 -->
+        <div class="clock-container">
+            <div class="clock" id="clockDisplay"></div>
+        </div>
+        
+        
+        
+        
+        <!-- 天気ガジェット -->
+        <div class="content-section">
+            <div class="content-section__header">
+                <h2 class="content-section__title">天気ガジェット</h2>
+            </div>
+            <div class="content-section__content">
+                <div class="weather">
+                    <h3 class="weather__title">東京の天気</h3>
+                    <div class="weather__icon"></div>
+                    <p class="weather__temperature">気温: <span id="temperature"></span></p>
+                    <p class="weather__condition">状態: <span id="condition"></span></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Python 天気予測 -->
+        <!-- <div class="weathercontainer"> -->
+            <!-- Linear Regression Prediction  -->
+            <!-- <h1>線形回帰予測</h1> -->
+            <!-- <svg class="chart" viewBox="0 0 500 500" width="180" height="180"></svg> -->
+        <!-- </div> -->
+        
+        
+        <!-- 為替ガジェット -->
+        <!-- <div class="content-section">
+            <div class="content-section__header">
+                <h2 class="content-section__title">為替ガジェット</h2>
+            </div>
+            <div class="content-section__content">
+                <div class="exchange-gadget__currency">
+                    <p class="exchange-gadget__label">USD/JPY</p>
+                    <p class="exchange-gadget__rate" id="usd-jpy">Loading...</p>
+                </div>
+                <div class="exchange-gadget__currency">
+                    <p class="exchange-gadget__label">EUR/JPY</p>
+                    <p class="exchange-gadget__rate" id="eur-jpy">Loading...</p>
+                </div>
+                <div class="exchange-gadget__currency">
+                    <p class="exchange-gadget__label">GBP/JPY</p>
+                    <p class="exchange-gadget__rate" id="gbp-jpy">Loading...</p>
+                </div>
+            </div>
+        </div> -->
+
+
+
+        <!-- 為替ガジェット -->
+        <div class="content-section">
+            <div class="content-section__header">
+                <h2 class="content-section__title">為替ガジェット</h2>
+            </div>
+            <div class="content-section__content">
+                <div class="exchange-gadget__currency">
+                    <p class="exchange-gadget__label">USD/JPY</p>
+                    <p class="exchange-gadget__rate" id="usd-jpy">Loading...</p>
+                </div>
+                <div class="exchange-gadget__currency">
+                    <p class="exchange-gadget__label">EUR/JPY</p>
+                    <p class="exchange-gadget__rate" id="eur-jpy">Loading...</p>
+                </div>
+                <div class="exchange-gadget__currency">
+                    <p class="exchange-gadget__label">GBP/JPY</p>
+                    <p class="exchange-gadget__rate" id="gbp-jpy">Loading...</p>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!-- 株価指数データ表示 -->
+<div id="indices">
+    <!-- <h1>株価指数データ</h1>
+    <table border='1'>
+        <tr>
+            <th>指数</th>
+            <th>現在値</th>
+            <th>変動</th>
+        </tr>
+    </table> -->
+</div>
+
+
+         <!-- Pythonコードの埋め込み -->
+    <!-- <div class="content-section">
+        <div class="content-section__header">
+            <h2 class="content-section__title">Pythonコードの埋め込み</h2>
+        </div>
     </div> -->
-    
-    <div class="header-content__clock-container">
-        <div class="clock" id="clockDisplay"></div>
-    </div>
-    
-    
-    
-    
-    <!-- 天気風ガジェット -->
-    <div class="header-content__gadget">
-        <div class="gadget__header">
-            <h2 class="gadget__title">天気ガジェット</h2>
-        </div>
-        <div class="gadget__content">
-            <div class="weather">
-                <h3 class="weather__title">東京の天気</h3>
-                <div class="weather__icon"></div>
-                <p class="weather__temperature">気温: <span id="temperature"></span></p>
-                <p class="weather__condition">状態: <span id="condition"></span></p>
-            </div>
-        </div>
-    </div>
-    
-    
-    <!-- 為替ガジェット -->
-    <div class="header-content__exchange-gadget">
-        <div class="exchange-gadget__header">
-            <h2 class="exchange-gadget__title">為替ガジェット</h2>
-        </div>
-        <div class="exchange-gadget__content">
-            <div class="exchange-gadget__currency">
-                <p class="exchange-gadget__label">USD/JPY</p>
-                <p class="exchange-gadget__rate" id="usd-jpy">Loading...</p>
-            </div>
-            <div class="exchange-gadget__currency">
-                <p class="exchange-gadget__label">EUR/JPY</p>
-                <p class="exchange-gadget__rate" id="eur-jpy">Loading...</p>
-            </div>
-            <div class="exchange-gadget__currency">
-                <p class="exchange-gadget__label">GBP/JPY</p>
-                <p class="exchange-gadget__rate" id="gbp-jpy">Loading...</p>
-            </div>
-        </div>
-    </div>
 
 
-    <!-- header下、自己紹介とプロフィール -->
-    <div class="profile">
-        <p class="profile__name">名前:佐藤</p>
-        <p class="profile__intro">自己紹介:
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi nihil adipisci eius ducimus, alias tenetur reprehenderit voluptas aut iure eveniet ab illo veritatis voluptatem blanditiis voluptatibus iste totam pariatur dolorum.
-        </p>
-        <p class="profile__note">補足</p>
+    </div>
+
+    <div class="card__aside-right-column">
+        <!-- header下、自己紹介とプロフィール -->
+        <!-- 自己紹介 -->
+        <div class="content-section">
+            <p class="content-section__name">名前: 佐藤聖也</p>
+            <p class="content-section__intro">自己紹介: Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi nihil adipisci eius ducimus, alias tenetur reprehenderit voluptas aut iure eveniet ab illo veritatis voluptatem blanditiis voluptatibus iste totam pariatur dolorum.</p>
+            <p class="content-section__note">補足:Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi nihil adipisci eius ducimus, alias tenetur reprehenderit voluptas aut iure eveniet ab illo veritatis voluptatem blanditiis voluptatibus iste totam pariatur dolorum.</p>
+        </div>
     </div>
 
 </div>
@@ -105,7 +163,7 @@
 <div class="mv-container">
     <div class="mv-container__top-section">
         <h1 class="mv-container__title">Welcome(MV)</h1>
-        <p class="mv-container__description">This is the top section</p>
+        <p class="mv-container__description">This is the top section「朝・昼・夜」</p>
     </div>
 </div>
 
@@ -115,15 +173,15 @@
 
     <section class="main-content">
         <article>
-          <h2>Breaking News</h2>
+          <h2>Breaking News「ニュース速報」</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla fermentum, mauris id sodales gravida.</p>
         </article>
         <article>
-          <h2>Featured Story</h2>
+          <h2>Featured Story特集記事「新聞・雑誌」</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla fermentum, mauris id sodales gravida.</p>
         </article>
         <article>
-          <h2>Opinion Piece</h2>
+          <h2>Opinion Piece「意見記事・論説」</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla fermentum, mauris id sodales gravida.</p>
         </article>
       </section>
@@ -136,38 +194,75 @@
     <div class="container">
         <div class="column">
             <!-- Column 1 -->
-            <div class="block">HTML</div>
+            <div class="block"><a href="html01.html">HTML</a></div>
             <div class="block">CSS</div>
             <div class="block">Vue</div>
-            <div class="block"></div>
-            <div class="block"></div>
-            <div class="block"></div>
-            <div class="block"></div>
-            <div class="block"></div>
+            <div class="block">GAME</div>
+            <!-- <div class="block"></div> -->
+            <!-- <div class="block"></div> -->
+            <!-- <div class="block"></div> -->
+            <!-- <div class="block"></div> -->
         </div>
         <div class="column">
             <!-- Column 2 -->
+            <div class="block">チラシ・広告</div>
+            <div class="block">美容</div>
+            <div class="block">趣味(NARUTO)</div>
             <div class="block"></div>
-            <div class="block"></div>
-            <div class="block"></div>
-            <div class="block"></div>
-            <div class="block"></div>
-            <div class="block"></div>
-            <div class="block"></div>
-            <div class="block"></div>
+            <!-- <div class="block"></div> -->
+            <!-- <div class="block"></div> -->
+            <!-- <div class="block"></div> -->
+            <!-- <div class="block"></div> -->
         </div>
-        <div class="column">
+              <div class="column">
             <!-- Column 3 -->
             <div class="block"></div>
             <div class="block"></div>
             <div class="block"></div>
             <div class="block"></div>
-            <div class="block"></div>
-            <div class="block"></div>
-            <div class="block"></div>
-            <div class="block"></div>
+            <!-- <div class="block"></div> -->
+            <!-- <div class="block"></div> -->
+            <!-- <div class="block"></div> -->
+            <!-- <div class="block"></div> -->
         </div>
     </div>
+
+
+
+
+
+            
+            <main class="portfolio">
+                <div class="portfolio__container">
+                    <div class="portfolio__work">
+                        <img src="images/unnamed.jpg" alt="Work 1" class="portfolio__image">
+                        <div class="portfolio__description">Description of Work 1</div>
+                    </div>
+                    <div class="portfolio__work">
+                        <img src="images/unnamed.jpg" alt="Work 2" class="portfolio__image">
+                        <div class="portfolio__description">Description of Work 2</div>
+                    </div>
+                    <div class="portfolio__work">
+                        <img src="images/unnamed.jpg" alt="Work 3" class="portfolio__image">
+                        <div class="portfolio__description">Description of Work 3</div>
+                    </div>
+                    <div class="portfolio__work">
+                        <img src="images/unnamed.jpg" alt="Work 4" class="portfolio__image">
+                        <div class="portfolio__description">Description of Work 4</div>
+                    </div>
+                </div>
+                <button class="portfolio__button portfolio__button--prev">Previous</button>
+                <button class="portfolio__button portfolio__button--next">Next</button>
+            </main>
+           
+
+
+
+
+ 
+ 
+  
+ 
     
 
 
@@ -176,11 +271,12 @@
     <footer class="footer">
         <div class="footer__contact">
             <div class="footer__contact-inner">
-                <p class="footer__contact-title">お問合せ</p>
+                <p class="footer__contact-title"><a href="http://">お問合せ</a></p>
             </div>
+            <p>備考・©Copyright・SeiyaSato・Portfolio</p>
         </div>
         <div class="footer__columns">
-            <div class="footer__column"></div>
+            <div class="footer__column">ITニュース・セキュリティーニュース</div>
             <div class="footer__column"></div>
             <div class="footer__column">統計</div>
         </div>
@@ -193,8 +289,13 @@
     
 
     <script src="js/clocktime.js"></script>
+    <script src="js/weatherJS.js"></script>
     <script src="scripts/exchange-gadget.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.12.3/jquery.min.js"></script>
+    <script src="js/stock_indices.js"></script>
     <script src="js/movie.js"></script>
     <script src="js/block.js"></script>
+    <script src="PortfolioSlide.js"></script>
 </body>
 </html>

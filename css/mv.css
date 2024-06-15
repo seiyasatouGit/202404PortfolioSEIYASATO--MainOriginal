@@ -31,12 +31,15 @@ body {
     /* /* background-image: url('/js/images/morning.jpg'); */
     /* z-index: 1; */
     font-size: 36px;
-    width: 480px;
+    /* width: 480px; */
+    width: 40%;
     height: 240px;
     /* align-items: center; */
     margin: 0 auto;
     background-color:blue;
     opacity: 0.7;
+
+    font-size: 2rem;
 }
 
 /* 説明のスタイル */
@@ -44,6 +47,10 @@ body {
     color: #666;
     font-size: 18px;
     text-align: center;
+    background-color: #f0f0f0;
+    opacity: .5;
+    border-radius: 20px;
+    font-size: 24px;
 }
 
 /* トップセクションに適用する特別な演出のスタイル */
