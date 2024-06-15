@@ -1,0 +1,123 @@
+.ad-container {
+    /* width: 200px; */
+    height: 155px;
+    /* height: 100%; */
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    position: relative;
+
+    border-bottom: 10px #0b1ecf solid;
+}
+
+.cat {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    animation: moveCat 5s linear infinite;
+}
+
+@keyframes moveCat {
+    0% { left: -100px; }
+    50% { left: calc(100% - 50px); }
+    100% { left: -100px; }
+}
+
+.cat-body {
+    position: relative;
+    width: 50px;
+    height: 30px;
+    background-color: black;
+    border-radius: 20px;
+}
+
+.cat-tail {
+    position: absolute;
+    bottom: 0;
+    left: -10px;
+    width: 20px;
+    height: 5px;
+    background-color: black;
+    border-radius: 10px;
+    transform: rotate(30deg);
+}
+
+.cat-head {
+    position: absolute;
+    top: -15px;
+    left: 10px;
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.cat-ear {
+    position: absolute;
+    top: -10px;
+    width: 10px;
+    /* 元の高さ */
+    /* height: 10px; */
+    /* 耳の高さ修正 */
+    height: 20px;
+    background-color: black;
+    /* 元のサイズ */
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    /* 耳の傾き修正 */
+    clip-path: polygon(50% 0%, 0% 80%, 80% 100%);
+}
+
+.cat-ear.left {
+    left: 0;
+}
+
+.cat-ear.right {
+    right: 0;
+}
+
+.cat-eye {
+    position: absolute;
+    top: 5px;
+    width: 3px;
+    height: 3px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.cat-eye.left {
+    left: 5px;
+}
+
+.cat-eye.right {
+    right: 5px;
+}
+
+.cat-leg {
+    position: absolute;
+    bottom: 0;
+    width: 5px;
+    height: 15px;
+    background-color: black;
+    border-radius: 5px;
+}
+
+.cat-leg.front {
+    left: 5px;
+    animation: legMove 0.5s infinite alternate;
+}
+
+.cat-leg.back {
+    right: 5px;
+    animation: legMove 0.5s infinite alternate-reverse;
+}
+
+@keyframes legMove {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(20deg);
+    }
+}

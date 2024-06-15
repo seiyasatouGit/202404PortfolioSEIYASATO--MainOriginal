@@ -53,6 +53,21 @@ nav ul li a {
 
 
 
+  /* 共通の見出し　ｈ１ */
+
+   /* 共通の見出し　ｈ２ */
+  .section-title {
+    /* margin: 0 auto; */
+    text-align: center;
+    margin-top: 16px;
+
+
+  }
+   /* 共通の見出し　ｈ３ */
+
+    /* 共通の見出し　ｈ４ */
+
+
 
 /* ガジェット箱と自己紹介箱を囲んだ「箱」 */
   .card__aside {
