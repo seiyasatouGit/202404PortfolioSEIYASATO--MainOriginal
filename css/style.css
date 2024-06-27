@@ -27,6 +27,7 @@ header {
 
 header h1 {
   margin: 0;
+  margin-bottom: 60px;
 }
 
 nav ul {
@@ -187,6 +188,9 @@ nav ul li a {
 /* 時計ガジェット */
 .clock-container {
   margin-bottom: 20px;
+  border-radius: 2px;
+  box-shadow: #3f3d3d;
+  border: #b9b3b3 solid 1px;
 }
 .clock {
   font-size: 32px;
@@ -372,3 +376,92 @@ nav ul li a {
   text-decoration: none;
   color: #333;
 }
+
+
+/* pink */
+.block-pink {
+  width: 3cm;
+  height: 3cm;
+  /* グミのような色に設定 */
+  /* background-color: #9bdaf1; */
+  margin-bottom: 3cm;
+  border-radius: 10px; /* 角を少し丸くする */
+  transition: transform 0.2s ease-in-out; /* アニメーションの設定 */
+  background-color: #DD2D90;
+  border: 2px solid #DA9497;
+  /* box-shadow:; */
+}
+
+.block-pink--hover {
+  transform: rotate(2deg) scale(1.05); /* ポインターを当てると少し揺れる */
+}
+
+
+.block-pink a {
+  text-decoration: none;
+  color: #333;
+}
+
+
+/* orange　カレー */
+.block-orange {
+  width: 3cm;
+  height: 3cm;
+  /* グミのような色に設定 */
+  /* background-color: #9bdaf1; */
+  margin-bottom: 3cm;
+  border-radius: 10px; /* 角を少し丸くする */
+  transition: transform 0.2s ease-in-out; /* アニメーションの設定 */
+  background-color: #dda52d;
+  /* border: 2px solid #DA9497; */
+  /* box-shadow:; */
+  /* font-family: Chili Pepper; */
+  font-family: 'Spicy Rice', cursive;
+  font-weight: 200;
+  font-size: 16px;
+  font: bold;
+  padding-top: 5px;
+  /* box-shadow: #942121 2px; */
+  /* border: #942121 2px solid; */
+
+  /* border: #942121 2px solid; */
+  /* box-shadow:  10px 15px -5px #942121; */
+
+}
+
+.block-orange--hover {
+  transform: rotate(2deg) scale(1.05); /* ポインターを当てると少し揺れる */
+
+
+
+}
+
+
+.block-orange a {
+  text-decoration: none;
+  color: #333;
+
+  font-family: 'Spicy Rice', cursive;
+  font: bold;
+
+  border-bottom: #942121 2px solid;
+  
+}
+
+
+
+
+.block-orange__curry {
+  /* background-image: url('../js/images/night001.jpg'); */
+
+}
+.orange__curry--img {
+  width: 70%;
+  /* height: auto; */
+  margin-top: 20px;
+  margin-left: 30px;
+  border-radius: 20%;
+
+  border: #942121 2px solid;
+}
+

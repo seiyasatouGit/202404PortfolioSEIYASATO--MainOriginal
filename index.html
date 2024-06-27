@@ -3,19 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ポートフォリオの紹介。">
     <title>PortfolioSEIYASATO</title>
+    <!-- フォント　カレー -->
+    <link href="https://fonts.googleapis.com/css2?family=Spicy+Rice&display=swap" rel="stylesheet">
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/NewspaperAnimation.css">
     <link rel="stylesheet" href="styles/exchange-gadget.css">
     <link rel="stylesheet" href="css/mv.css">
+    <link rel="stylesheet" href="css/simple_3d_shooter.css">
     <link rel="stylesheet" href="css/portfoliowork.css">
     <link rel="stylesheet" href="css/cat.css">
+    <link rel="stylesheet" href="css/chat.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="styles/responsive.css"> <!-- レスポンシブスタイルを追加 -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.12.3/jquery.min.js"></script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "佐藤聖也",
+      "jobTitle": "",
+      "url": "https://seiyasatougit.github.io/202404PortfolioSEIYASATO--MainOriginal/",
+      "sameAs": [
+        "http://linkedin.com/in/yourprofile",
+        "http://github.com/yourprofile"
+      ]
+    }
+    </script>
 </head>
 <body>
     <header>
+
+        <div class="mascot-container">
+            <div class="mascot-newspaper" id="newspaper">
+                <div class="mascot-newspaper__wrapper">
+                    <div class="mascot-newspaper__front">
+                        <div class="mascot-newspaper__headline">The Times</div>
+                        <div class="mascot-newspaper__subheadline">Exclusive Report</div>
+                        <div class="mascot-newspaper__subheadline">Breaking News</div>
+                    </div>
+                    <div class="mascot-newspaper__back">
+                        <div class="mascot-newspaper__column">
+                            <div class="mascot-newspaper__column-title">Feature Story</div>
+                            <div class="mascot-newspaper__column-content"></div>
+                        </div>
+                        <div class="mascot-newspaper__column">
+                            <div class="mascot-newspaper__column-title">Opinion</div>
+                            <div class="mascot-newspaper__column-content"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="js/NewspaperAnimation.js"></script>
+        
+
+
+
         <h1>PortfolioSEIYASATO</h1>
 
         <nav>
@@ -150,7 +199,8 @@
         <!-- 自己紹介 -->
         <div class="content-section">
             <p class="content-section__name">名前: 佐藤聖也</p>
-            <p class="content-section__intro">自己紹介: Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi nihil adipisci eius ducimus, alias tenetur reprehenderit voluptas aut iure eveniet ab illo veritatis voluptatem blanditiis voluptatibus iste totam pariatur dolorum.</p>
+            <p class="content-section__intro">自己紹介、１: Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi nihil adipisci eius ducimus, alias tenetur reprehenderit voluptas aut iure eveniet ab illo veritatis voluptatem blanditiis voluptatibus iste totam pariatur dolorum.</p>
+            <p class="content-section__intro">自己紹介、２: Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi nihil adipisci eius ducimus, alias tenetur reprehenderit voluptas aut iure eveniet ab illo veritatis voluptatem blanditiis voluptatibus iste totam pariatur dolorum.</p>
             <p class="content-section__note">補足:Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi nihil adipisci eius ducimus, alias tenetur reprehenderit voluptas aut iure eveniet ab illo veritatis voluptatem blanditiis voluptatibus iste totam pariatur dolorum.</p>
         </div>
     </div>
@@ -198,7 +248,7 @@
             <div class="block"><a href="html01.html">HTML</a></div>
             <div class="block">CSS</div>
             <div class="block">Vue</div>
-            <div class="block">GAME</div>
+            <div class="block"><a href="python/simple_3d_shooter.py">GAME</a></div>
             <!-- <div class="block"></div> -->
             <!-- <div class="block"></div> -->
             <!-- <div class="block"></div> -->
@@ -215,10 +265,21 @@
             <!-- <div class="block"></div> -->
             <!-- <div class="block"></div> -->
         </div>
-              <div class="column">
+        <div class="column">
             <!-- Column 3 -->
-            <div class="block"></div>
-            <div class="block"></div>
+            <div class="block">WordPress</div>
+            <div class="block">過去の作品(ポートフォリオ)</div>
+            <div class="block-pink"><a class="block-pink" href="https://2023pinksunabaco.studio.site">STUDIO</a></div>
+            <div class="block">その他</div>
+            <!-- <div class="block"></div> -->
+            <!-- <div class="block"></div> -->
+            <!-- <div class="block"></div> -->
+            <!-- <div class="block"></div> -->
+        </div>
+        <div class="column">
+            <!-- Column 4 -->
+            <div class="block-orange"><a class="block-orange" href="Curry-Spice.html">カレー・香辛料<p class="block-orange__curry"><img src="images/curry--img__mini.jpg" alt="カレーイメージアイコン" class="orange__curry--img"></p></a></div>
+            <div class="block"><div class="block"><a href="Before-Shooting.html">Shooting</a></div></div>
             <div class="block"></div>
             <div class="block"></div>
             <!-- <div class="block"></div> -->
@@ -231,17 +292,27 @@
 
 
 
+    <!-- chatbot -->
+    <div>chat「Q&A」</div>
+    <div id="chat-container">
+        <div id="chat-log"></div>
+        <div id="user-input-container">
+            <input type="text" id="user-input" placeholder="メッセージを入力">
+            <button id="send-button">送信</button>
+        </div>
+    </div>    
 
             
             <main class="portfolio">
                 <div class="portfolio__container">
                     <div class="portfolio__work">
-                        <img src="images/unnamed.jpg" alt="Work 1" class="portfolio__image">
-                        <div class="portfolio__description">Description of Work 1</div>
+                        <a href="https://seiyasatougit.github.io/seep-mizuiro/index.html">
+                        <img src="images/SATO-1--sheepmizuiro.png" alt="Work 1" class="portfolio__image"></a>
+                        <div class="portfolio__description">001　2022秋ポートフォリオ　Description of Work 1</div>
                     </div>
                     <div class="portfolio__work">
                         <img src="images/unnamed.jpg" alt="Work 2" class="portfolio__image">
-                        <div class="portfolio__description">Description of Work 2</div>
+                        <div class="portfolio__description">002  2023春ポートフォリオ  Description of Work 2</div>
                     </div>
                     <div class="portfolio__work">
                         <img src="images/unnamed.jpg" alt="Work 3" class="portfolio__image">
@@ -272,18 +343,27 @@
     <footer class="footer">
         <div class="footer__contact">
             <div class="footer__contact-inner">
-                <p class="footer__contact-title"><a href="http://">お問合せ</a></p>
+                <p class="footer__contact-title"><a href="ContactForm.html">お問合せ</a></p>
             </div>
             <p>備考・©Copyright・SeiyaSato・Portfolio</p>
         </div>
         <div class="footer__columns">
-            <div class="footer__column">ITニュース・セキュリティーニュース</div>
+            <div class="footer__column">ITニュース・セキュリティーニュース
+                <p><a href="http://">・2024/4月　[ニュース]--</a></p>
+                <p><a href="http://">・2024/5月　[ニュース]--paypay</a></p>
+                <p><a href="http://">・2024/6月　[ニュース]--ニコニコ</a></p>
+                <p><a href="http://">・2024/7月　[ニュース]</a></p>
+                <p><a href="http://">・2024/8月　[ニュース</a>]</p>
+                <p><a href="http://">・2024/9月　[ニュース]</a></p>
+            </div>
+
+
+
+
+
             <div class="footer__column">
 
-
-
-
-
+                <!-- 猫 -->
                 <div class="ad-container">
                     <div class="cat">
                         <div class="cat-body">
@@ -307,12 +387,20 @@
         </div>
         <div class="footer__columns">
             <div class="footer__column">設計書　例</div>
-            <div class="footer__column">仕様書　例</div>
-            <div class="footer__column">フレームワーク　図形</div>
+            <div class="footer__column"><a href="speciflcation.html">仕様書　例</a>
+            <p>・機能</p>
+            <p>・システム</p>
+            <p>・機能</p>
+            <p>・システム</p>
+            <p>・機能</p>
+            <p>・システム</p>
+        </div>
+            <div class="footer__column">フレームワーク　図形　モップアップ(デザインカンプ)</div>
         </div>
     </footer>
     
-
+    
+    <script src="js/NewspaperAnimation.js"></script>
     <script src="js/clocktime.js"></script>
     <script src="js/weatherJS.js"></script>
     <script src="scripts/exchange-gadget.js"></script>
@@ -321,6 +409,11 @@
     <script src="js/stock_indices.js"></script>
     <script src="js/movie.js"></script>
     <script src="js/block.js"></script>
+    <!-- シューティング２ -->
+    <!-- <script src="js/simple_3d_shooter.js"></script> -->
+    <!-- シューティング１ -->
+    <script src="js/Before-Shooting.js"></script>
+    <script src="js/chat.js"></script>
     <script src="PortfolioSlide.js"></script>
 </body>
 </html>

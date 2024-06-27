@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PortfolioSEIYASATO</title>
+    <link rel="stylesheet" href="css/NewspaperAnimation.css">
+    <link rel="stylesheet" href="styles/exchange-gadget.css">
+    <link rel="stylesheet" href="css/mv.css">
+    <link rel="stylesheet" href="css/simple_3d_shooter.css">
+    <link rel="stylesheet" href="css/portfoliowork.css">
+    <link rel="stylesheet" href="css/cat.css">
+    <link rel="stylesheet" href="css/chat.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="styles/responsive.css"> <!-- レスポンシブスタイルを追加 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.12.3/jquery.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>PortfolioSEIYASATO</h1>
+
+        <nav>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="#">News</a></li>
+              <li><a href="#">Features</a></li>
+              <li><a href="#">Opinion</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+    </header>
+
+    <h1>3D Shooting Game</h1>
+    <canvas id="gameCanvas" width="800" height="600"></canvas>
+
+
+
+
+    <!-- chatbot -->
+    <div>chat「Q&A」</div>
+    <div id="chat-container">
+        <div id="chat-log"></div>
+        <div id="user-input-container">
+            <input type="text" id="user-input" placeholder="メッセージを入力">
+            <button id="send-button">送信</button>
+        </div>
+    </div>    
+
+            
+            <main class="portfolio">
+                <div class="portfolio__container">
+                    <div class="portfolio__work">
+                        <a href="https://seiyasatougit.github.io/seep-mizuiro/index.html">
+                        <img src="images/SATO-1--sheepmizuiro.png" alt="Work 1" class="portfolio__image"></a>
+                        <div class="portfolio__description">001　2022秋ポートフォリオ　Description of Work 1</div>
+                    </div>
+                    <div class="portfolio__work">
+                        <img src="images/unnamed.jpg" alt="Work 2" class="portfolio__image">
+                        <div class="portfolio__description">Description of Work 2</div>
+                    </div>
+                    <div class="portfolio__work">
+                        <img src="images/unnamed.jpg" alt="Work 3" class="portfolio__image">
+                        <div class="portfolio__description">Description of Work 3</div>
+                    </div>
+                    <div class="portfolio__work">
+                        <img src="images/unnamed.jpg" alt="Work 4" class="portfolio__image">
+                        <div class="portfolio__description">Description of Work 4</div>
+                    </div>
+                </div>
+                <button class="portfolio__button portfolio__button--prev">Previous</button>
+                <button class="portfolio__button portfolio__button--next">Next</button>
+            </main>
+
+
+
+
+
+
+
+
+
+    <footer class="footer">
+        <div class="footer__contact">
+            <div class="footer__contact-inner">
+                <p class="footer__contact-title"><a href="http://">お問合せ</a></p>
+            </div>
+            <p>備考・©Copyright・SeiyaSato・Portfolio</p>
+        </div>
+        <div class="footer__columns">
+            <div class="footer__column">ITニュース・セキュリティーニュース
+                <p><a href="http://">・2024/4月　[ニュース]--</a></p>
+                <p><a href="http://">・2024/5月　[ニュース]--paypay</a></p>
+                <p><a href="http://">・2024/6月　[ニュース]--ニコニコ</a></p>
+                <p><a href="http://">・2024/7月　[ニュース]</a></p>
+                <p><a href="http://">・2024/8月　[ニュース</a>]</p>
+                <p><a href="http://">・2024/9月　[ニュース]</a></p>
+            </div>
+
+
+
+
+
+            <div class="footer__column">
+
+                <!-- 猫 -->
+                <div class="ad-container">
+                    <div class="cat">
+                        <div class="cat-body">
+                            <div class="cat-tail"></div>
+                            <div class="cat-head">
+                                <div class="cat-ear left"></div>
+                                <div class="cat-ear right"></div>
+                                <div class="cat-eye left"></div>
+                                <div class="cat-eye right"></div>
+                            </div>
+                            <div class="cat-leg front"></div>
+                            <div class="cat-leg back"></div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+            <div class="footer__column">統計</div>
+        </div>
+        <div class="footer__columns">
+            <div class="footer__column">設計書　例</div>
+            <div class="footer__column"><a href="speciflcation.html">仕様書　例</a>
+            <p>・機能</p>
+            <p>・システム</p>
+            <p>・機能</p>
+            <p>・システム</p>
+            <p>・機能</p>
+            <p>・システム</p>
+        </div>
+            <div class="footer__column">フレームワーク　図形　モップアップ(デザインカンプ)</div>
+        </div>
+    </footer>
+    
+
+
+    <script src="js/NewspaperAnimation.js"></script>
+    <script src="js/clocktime.js"></script>
+    <script src="js/weatherJS.js"></script>
+    <script src="scripts/exchange-gadget.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.12.3/jquery.min.js"></script>
+    <script src="js/stock_indices.js"></script>
+    <script src="js/movie.js"></script>
+    <script src="js/block.js"></script>
+    <script src="js/simple_3d_shooter.js"></script>
+    <script src="js/chat.js"></script>
+    <script src="PortfolioSlide.js"></script>
+</body>
+</html>

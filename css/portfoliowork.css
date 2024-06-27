@@ -62,6 +62,8 @@
 .portfolio__image {
     width: 25%;
     height: auto;
+
+    height: 50%;
     
 }
 
