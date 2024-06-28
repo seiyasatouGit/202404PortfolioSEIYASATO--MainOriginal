@@ -535,3 +535,32 @@ overflow: auto;
 
   border: #942121 2px solid;
 }
+
+
+
+
+/* シューティング　濃い青 */
+/* azure-blue */
+.block-azure-blue {
+  width: 3cm;
+  height: 3cm;
+  /* グミのような色に設定 */
+  /* background-color: #9bdaf1; */
+  margin-bottom: 3cm;
+  border-radius: 10px; /* 角を少し丸くする */
+  transition: transform 0.2s ease-in-out; /* アニメーションの設定 */
+  background-color: #110794;
+  border: 2px solid #50bd86e7;
+  /* box-shadow:; */
+  font-size: 16px;
+}
+
+.block-azure-blue--hover {
+  transform: rotate(2deg) scale(1.05); /* ポインターを当てると少し揺れる */
+}
+
+
+.block-azure-blue a {
+  text-decoration: none;
+  color: #8ad490;
+}
