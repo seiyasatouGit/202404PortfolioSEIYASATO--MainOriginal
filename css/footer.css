@@ -3,14 +3,20 @@
     padding: 20px;
     text-align: center;
 
+    /* overflow-x: auto; */
+
 
     /* display: flex; */
     /* flex-wrap: wrap; */
-    gap: 20px;
+    /* gap: 20px; */
+    overflow-x: auto;
+    white-space: nowrap;
 }
 
 .footer__contact {
     margin-bottom: 20px;
+
+    text-align: center;
 
 
     flex: 1;
@@ -23,34 +29,107 @@
     padding: 10px 20px;
     border-radius: 5px;
     border:  solid 1px  #666666;
+
+    margin-bottom: 10px;
 }
 
 .footer__contact-title {
     margin: 0;
     color: #666666; /* グレー系の優しい色味 */
+
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
     
 }
 
 .footer__contact-title a {
     /* color: #fff; */
+
+    text-decoration: none;
+    color: #0073e6;
+    
+}
+
+
+.footer__column a:hover {
+    text-decoration: underline;
 }
 
 
 .footer__columns {
     display: flex;
     justify-content: space-between;
+    /* justify-content: flex-start; */
     margin-bottom: 20px;
 
     gap: 20px;
+
+    /* flex-wrap: nowrap; */
     
 }
 
 .footer__column {
-    flex: 1;
+    /* flex: 1; */
+    flex: 0 0 auto;
+    /* 最小幅を指定 */
+    width: 400px;
+    /* align-items: center; */
+    margin: 0 auto;
+
+    /* max-width: 400px; */
+
     height: 160px;
     background-color: #ffffff; /* 白色の背景 */
     border-radius: 5px;
     border:  solid 1px  #b3b1b1;
+
+    /* オーバーフローする内容にスクロールを追加 */
+    overflow: auto;
+     /* アニメーションの追加 */
+    /* transition: transform 0.5s, opacity 0.5s; */
+
+    cursor: pointer;
+    transition: transform 0.5s, opacity 0.5s,  box-shadow 0.5s;;
+    transform: translateY(-10px); /* 初期位置を浮かせる */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* 初期状態で影を追加 */
+}
+
+.footer__column:hover {
+    /* ホバー時に浮き上がる  */
+    /* transform: translateY(-10px); */
+
+    transform: translateY(0); /* ホバー時に沈む */
+    box-shadow: none; /* ホバー時に影を消す */
+    background-color: rgba(0, 0, 255, 0.1); /* 色を変更 */
+    opacity: 0.8; /* 不透明度を変える */
+}
+/* .footer__column.float-down { */
+    /* 下に沈む */
+    /* transform: translateY(100px); */
+    /* opacity: 0; */
+/* } */
+
+
+.footer__column:active {
+    transform: translateY(10px); /* クリック時にさらに沈む */
+}
+
+
+
+
+.footer__column p {
+    margin: 5px 0;
+
+}
+
+.footer__news-section {
+    margin-bottom: 10px;
+}
+
+
+.footer__news-section h5 {
+    margin: 10px 0;
 }
 
 /* レスポンシブ対応 */
@@ -58,4 +137,10 @@
     .footer__columns {
         flex-direction: column;
     }
+
 }
+    /* .footer__column { */
+         /* 小さい画面では初期状態の浮きを解除 */
+        /* transform: none; */
+    /* } */
+
