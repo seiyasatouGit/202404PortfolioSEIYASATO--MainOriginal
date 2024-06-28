@@ -153,6 +153,10 @@ nav ul li a {
   margin: 0 0 10px;
 }
 
+.content-sectionP{
+ /* オーバーフローする内容にスクロールを追加 */
+overflow: auto;
+}
 
 
 
@@ -296,6 +300,7 @@ nav ul li a {
   /* color: #ebe9e9e8; */
   /* font-family: fantasy; */
   padding-left: 5px;
+
 }
 
 /* 名前 */
@@ -465,3 +470,68 @@ nav ul li a {
   border: #942121 2px solid;
 }
 
+
+
+/* brown　焼肉 */
+.block-brown {
+  width: 3cm;
+  height: 3cm;
+  /* グミのような色に設定 */
+  /* background-color: #9bdaf1; */
+  margin-bottom: 3cm;
+  border-radius: 10px; /* 角を少し丸くする */
+  transition: transform 0.2s ease-in-out; /* アニメーションの設定 */
+  background-color: #da4d2a;
+  /* border: 2px solid #DA9497; */
+  /* box-shadow:; */
+  /* font-family: Chili Pepper; */
+  font-family: 'Spicy Rice', cursive;
+  font-weight: 200;
+  font-size: 16px;
+  font: bold;
+  padding-top: 5px;
+  /* color: #ccc; */
+  /* box-shadow: #942121 2px; */
+  /* border: #942121 2px solid; */
+
+  /* border: #942121 2px solid; */
+  /* box-shadow:  10px 15px -5px #942121; */
+
+}
+
+.block-brown--hover {
+  transform: rotate(2deg) scale(1.05); /* ポインターを当てると少し揺れる */
+
+
+
+}
+
+
+.block-brown a {
+  text-decoration: none;
+  /* color: #333; */
+  color: #ccc;
+
+  font-family: 'Spicy Rice', cursive;
+  font: bold;
+
+  border-bottom: #942121 2px solid;
+  
+}
+
+
+
+
+.block-brown__Grilled {
+  /* background-image: url('../js/images/night001.jpg'); */
+
+}
+.brown__GrilledMeat--img {
+  width: 70%;
+  /* height: auto; */
+  margin-top: 20px;
+  margin-left: 30px;
+  border-radius: 20%;
+
+  border: #942121 2px solid;
+}
