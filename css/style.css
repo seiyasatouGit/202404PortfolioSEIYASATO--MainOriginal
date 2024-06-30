@@ -319,6 +319,25 @@ overflow: auto;
   .header-content {
       flex-direction: column; /* 小さい画面サイズでは縦方向に並べる */
   }
+
+  .container {
+    /* gap: 0.5cm;
+    /* width: 25%; */
+    /* flex-direction:row; */
+    /* align-items: center; */
+    /* display:inline-block; */
+    /* margin: 0 auto; */
+    /* justify-content: space-between; */
+  }
+
+  .column {
+    max-width: 8px;
+    flex-direction: row-reverse;
+  }
+  .block {
+    /* flex-direction: row-reverse; */
+    
+  }
 }
 
 
@@ -370,6 +389,7 @@ overflow: auto;
   margin-bottom: 3cm;
   border-radius: 10px; /* 角を少し丸くする */
   transition: transform 0.2s ease-in-out; /* アニメーションの設定 */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* 初期状態で影を追加 */
 }
 
 .block--hover {
@@ -395,6 +415,7 @@ overflow: auto;
   background-color: #DD2D90;
   border: 2px solid #DA9497;
   /* box-shadow:; */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* 初期状態で影を追加 */
 }
 
 .block-pink--hover {
@@ -431,6 +452,7 @@ overflow: auto;
 
   /* border: #942121 2px solid; */
   /* box-shadow:  10px 15px -5px #942121; */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* 初期状態で影を追加 */
 
 }
 
@@ -496,6 +518,7 @@ overflow: auto;
 
   /* border: #942121 2px solid; */
   /* box-shadow:  10px 15px -5px #942121; */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* 初期状態で影を追加 */
 
 }
 
@@ -553,6 +576,7 @@ overflow: auto;
   border: 2px solid #50bd86e7;
   /* box-shadow:; */
   font-size: 16px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* 初期状態で影を追加 */
 }
 
 .block-azure-blue--hover {
@@ -563,4 +587,15 @@ overflow: auto;
 .block-azure-blue a {
   text-decoration: none;
   color: #8ad490;
+}
+
+
+.block-azure-blue__Shooting--img {
+  width: 70%;
+  /* height: auto; */
+  margin-top: 20px;
+  margin-left: 30px;
+  border-radius: 20%;
+
+  border: #942121 2px solid;
 }

@@ -1,0 +1,27 @@
+/* .gameCanvas.h1{
+    color: #296e57d8;
+    z-index: 10;
+} */
+
+
+h1.Shooting-name {
+    background-color:rgba(rgba(0, 238, 255, 0.856), rgb(70, 212, 70), rgb(15, 51, 209), alpha);
+    /* border-bottom: 1px #49aca3d8 solid; */
+}
+
+.Shooting-name{
+    color: #296e57d8;
+    z-index: 10;
+    padding-left: 10px;
+    padding-top: 20px;
+    padding-bottom: 5px;
+    /* background-color:rgba(rgba(0, 238, 255, 0.856), rgb(70, 212, 70), rgb(15, 51, 209), alpha); */
+    /* border-bottom: 1px #49aca3d8 solid; */
+}
+
+
+.background-Shooting {
+    background-image: url("../images/Shooting--Moon.jpg");
+    width: 95%;
+    margin: 0 auto;
+}

@@ -19,6 +19,8 @@
     padding: 2rem;
     background-color: #f5f5f5;
 
+    /* ボタンが正しく配置されるように相対位置を指定 */
+    /* position: relative; */
 }
 
 
