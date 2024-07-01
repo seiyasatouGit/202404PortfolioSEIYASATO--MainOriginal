@@ -599,3 +599,27 @@ overflow: auto;
 
   border: #942121 2px solid;
 }
+
+
+
+
+
+/* ラーメン */
+.block-Ramen {
+  width: 3cm;
+  height: 3cm;
+  /* グミのような色に設定 */
+  /* background-color: #9bdaf1; */
+  margin-bottom: 3cm;
+  border-radius: 10px; /* 角を少し丸くする */
+  transition: transform 0.2s ease-in-out; /* アニメーションの設定 */
+  background-color: #FFCC00;
+  border: 2px solid #bd9750e7;
+  /* box-shadow:; */
+  font-size: 16px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* 初期状態で影を追加 */
+}
+
+.block-RRamen--hover {
+  transform: rotate(2deg) scale(1.05); /* ポインターを当てると少し揺れる */
+}
