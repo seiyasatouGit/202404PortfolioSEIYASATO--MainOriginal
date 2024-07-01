@@ -1,0 +1,142 @@
+/* 四つに分裂 */
+
+
+.block-Vue {
+    width: 3cm;
+    height: 3cm;
+    background-color: #9bdaf1; /* グミのような色に設定 */
+    margin-bottom: 3cm;
+    border-radius: 10px; /* 角を少し丸くする */
+    /* アニメーションの設定 */
+    /* transition: transform 0.2s ease-in-out, width 0.2s ease-in-out, height 0.2s ease-in-out; */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* 初期状態で影を追加 */
+    position: relative; /* 子要素を相対配置 */
+
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .block-Vue--hover {
+    transform: rotate(2deg) scale(1.05); /* ポインターを当てると少し揺れる */
+  }
+  
+  .block-vue a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  /* .sub-block { */
+    /* width: 1.5cm; */
+    /* height: 1.5cm; */
+    /* 透明なすりガラス状の色 */
+    /* background-color: rgba(255, 255, 255, 0.8);  */
+    /* border-radius: 10px; */
+    /* position: absolute; */
+    /* transition: all 0.2s ease-in-out; */
+    /* opacity: 0; */
+    /* マウスイベントを無視 */
+    /* pointer-events: none;  */
+  /* } */
+/*   
+  .sub-block--active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  .sub-block--top-left {
+    top: -1.75cm;
+    left: -1.75cm;
+  }
+  
+  .sub-block--top-right {
+    top: -1.75cm;
+    right: -1.75cm;
+  }
+  
+  .sub-block--bottom-left {
+    bottom: -1.75cm;
+    left: -1.75cm;
+  }
+  
+  .sub-block--bottom-right {
+    bottom: -1.75cm;
+    right: -1.75cm;
+  }
+  
+
+
+ */
+
+
+
+
+  .sub-block {
+    width: 1.5cm;
+    height: 1.5cm;
+    background-color: #9bdaf1;
+    border-radius: 10px;
+    margin: 0.5cm;
+    transition: all 0.2s ease-in-out;
+
+    position: absolute;
+  }
+
+
+  .popup-container {
+    position: absolute;
+    top: -2cm;
+    left: -2cm;
+    width: 7cm;
+    height: 7cm;
+    /* background-color: rgba(255, 255, 255, 0.8); */
+    border-radius: 10px;
+    /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); */
+    display: none;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease-in-out;
+
+
+
+
+    /* すりがらす雨ページの透明度代用。 */
+      /* 初期値 */
+    /* background: rgba(255, 255, 255, 0.1); */
+    /* 透明度を増やす */
+    background: rgba(255, 255, 255, 0.05);
+    /* border-radius: 10px; */
+    /* padding: 20px; */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    /* backdrop-filter: blur(10px); */
+    /* 初期値 */
+    /* -webkit-backdrop-filter: blur(10px); */
+    /* 必要に応じてこの値も調整 　　ぼかし数字あげて増やす。*/
+    backdrop-filter: blur(22px);
+}
+  
+  
+  .popup-container.active {
+    display: flex;
+    opacity: 1;
+  }
+
+
+
+  .sub-block--top-left {
+    top: 1cm;
+    left: 1cm;
+  }
+  
+  .sub-block--top-right {
+    top: 1cm;
+    right: 1cm;
+  }
+  
+  .sub-block--bottom-left {
+    bottom: 1cm;
+    left: 1cm;
+  }
+  
+  .sub-block--bottom-right {
+    bottom: 1cm;
+    right: 1cm;
+  }

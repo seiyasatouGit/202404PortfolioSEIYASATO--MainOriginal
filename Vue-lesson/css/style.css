@@ -1,0 +1,175 @@
+/* body,ul{
+    margin: 0;
+
+}
+
+header{
+    width: 100%;
+    height: 60px;
+    background-color: black;
+    color: white;
+}
+
+header ul{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+h1{
+    text-align: center;
+    margin: 3em;
+}
+
+.member-wrap{
+    display: flex;
+    justify-content: space-around;
+}
+
+img{
+    border: 4px solid;
+    border-radius: 50%;
+    object-fit: cover;
+    width: 120px;
+    height: 120px;
+}
+
+.card{
+    width: 150px;
+    height: 200px;
+    border-radius: 4px;
+    box-shadow: 0px 3px 3px rgba(0,0,0,0.5);
+    padding: 40px;
+    text-align: center;
+} */
+
+
+/* .btn-wrap{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn{
+    width: 160px;
+    height: 40px;
+    border: none;
+    margin: 2em;
+    background-color: black;
+    color:white;
+    font-weight: bold;
+}
+
+.btn.active{
+    background-color: red;
+} */
+
+
+/* body{
+    margin: 0;
+    box-sizing: border-box;
+}
+header{
+    width: 100%;
+    height: 60px;
+    background-color: black;
+}
+.hamburger{
+    width: 60px;
+    height: 60px;
+    position: relative;
+    margin-left: 20px;
+}
+span{
+    position: absolute;
+    width: 56px;
+    height: 4px;
+    background-color: white;
+    transition: all .2s;
+}
+.border1{
+    top: 18px;
+    left: 0;
+}
+.border2{
+    bottom: 18px;
+    left: 0; */
+/* } */
+
+/* アクティブの時 */
+/* .hamburger.active .border1{
+    transform: translateY(10px) rotate(45deg);
+}
+
+.hamburger.active .border2{
+    transform: translateY(-10px) rotate(-45deg);
+}
+
+.nav{
+    width: 20vw;
+    height: 100vh;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+ul{
+    padding-left: 0;
+    padding-top: 200px;
+    text-align: center;
+}
+li{
+    color: white;
+    list-style: none;
+    margin-bottom: 40px;
+} */
+
+
+
+
+
+
+
+body{
+    background-color: darkgreen;
+}
+body,p{
+    margin: 0;
+}
+.container{
+    width: 60%;
+    margin: 0 auto;
+}
+h1{
+    color: deeppink;
+    text-align: center;
+    font-style: italic;
+}
+label,input,textarea{
+    display: block;
+    width: 100%;
+}
+.btn{
+    width: 120px;
+    margin: 0 auto;
+}
+.name-input,.message-input{
+    margin-bottom: 16px;
+}
+
+
+.warning{
+    font-size: 14px;
+    color: red;
+}
+.message-board{
+    border-bottom: 1px solid #000;
+    margin: 16px auto;
+}
+.message-board__name{
+    margin-right: 8px;
+    font-weight: bold;
+}

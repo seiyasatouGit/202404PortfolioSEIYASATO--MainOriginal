@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>みんなの掲示板</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- Vue.js -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+
+</head>
+<body>
+    <!-- <div id="app"> -->
+        <!-- <h1>{{text}}</h1>
+        <button v-on:click="textChange">Push me!</button> -->
+
+        <!-- <div class="container">
+            <h1>My counter App</h1>
+            <span v-if="count >= 100">おめでとうございます！！！</span>
+            <span v-else-if="count >= 70">あと少し！！</span>
+            <span v-else-if="count >= 50">半分！！</span>
+            <span v-else>100回クリック</span>
+
+            <div class="counter">
+                <p>{{ count }}</p>
+            </div>
+
+            <div class="btn-wrap"> -->
+                <!-- v-on:clickの省略は@ -->
+                <!-- <button @click="decerement">-1</button>
+                <button @click="increment">+1</button>
+            </div>
+           
+        </div>
+    
+
+    </div> -->
+
+    <!-- <div id="app"> -->
+       
+        <!-- <header>
+            <nav>
+                <ul>
+                    <li v-for="navigation in navigations">{{ navigation }}</li>
+                </ul>
+            </nav>
+        </header>
+        
+        <h1>Member</h1>
+
+        <div class="member-wrap">
+
+            <div class="card" v-for="member in members" :key="member.id">
+                <img :src="member.image" alt="" :style="{ borderColor: member.color }">
+                <h2>{{ member.name }}</h2>
+            </div>
+
+        </div>
+
+    </div> -->
+
+    <!-- <div id="app">
+
+        <div class="btn-wrap">
+            <button class="btn" :class="{active: classActive}">ボタン</button>
+            <button class="btn" :class="[classActive ? ''  : 'active']">ボタン</button>
+            <button class="btn" @click="toggleActive">ボタン</button>
+        </div>
+
+    </div> -->
+
+    <!-- <div id="app"> -->
+
+        <!-- <header>
+            <div class="hamburger" :class="{active: open }" @click="toggleButton">
+                <span class="border1"></span>
+                <span class="border2"></span>
+            </div>
+        </header>
+
+        <div class="nav" v-show="open">
+            <nav>
+                <ul>
+                    <li>menu1</li>
+                    <li>menu2</li>
+                    <li>menu3</li>
+                </ul>
+            </nav>
+        </div>
+
+    </div> -->
+
+    <div id="app">
+
+        <div class="container">
+            <h1>みんなの掲示板</h1>
+            <form action="" @submit.prevent="onSubmit">
+                <label for="name">名前</label>
+                <input type="text" id="name" class="name-input" v-model="name">
+                <label for="message">メッセージ</label>
+                <textarea name="" id="message" cols="30" rows="10" class="message-input" v-model="message"></textarea>
+                <p v-if="checkMessage" class="warning">20文字以内で入力してください</p>
+                <input type="submit" class="btn">
+            </form>
+
+            <div class="board-wrap">
+                <div class="message-board" v-for="post in posts" :key="index">
+                    <span class="message-board__name">{{post.name}}</span>
+                    <span class="message-board__name">{{post.message}}</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <p><a href="../index.html"  style="color: aliceblue; font-size: large; font-weight: 600;">一番最初のページに戻る。</a></p>
+
+
+    <script src="./js/common.js"></script>
+</body>
+</html>
