@@ -1,0 +1,77 @@
+/* リセットCSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    background: #2c3e50;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+header h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+.glass {
+    /* 初期値 */
+    /* background: rgba(255, 255, 255, 0.1); */
+    /* 透明度を増やす */
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    /* 初期値 */
+    /* -webkit-backdrop-filter: blur(10px); */
+    /* 必要に応じてこの値も調整 　　ぼかし数字あげて増やす。*/
+    backdrop-filter: blur(15px);
+}
+
+.rain-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+    /* background: url('path/to/your/rain-image.jpg') center/cover no-repeat; */
+    background: url('../images/RainSimple--illustration01.png') center/cover no-repeat;
+    animation: rain 18s linear infinite; /* ここでアニメーション速度を調整 */
+}
+
+@keyframes rain {
+    0% { background-position: 0 0; }
+    100% { background-position: 100% 100%; }
+}
+
+/* セクションの見出しスタイル */
+.glass h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #527496;
+}
+
+.glass p {
+    font-size: 1em;
+    line-height: 1.6em;
+    color: #5d94a5;
+}
