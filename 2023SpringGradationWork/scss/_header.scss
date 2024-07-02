@@ -1,0 +1,112 @@
+@use 'variables'as *;
+@use 'mixin'as *;
+
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 160px;
+    width: 100%;
+    padding: 0 40px;
+    background-color: $header;
+    // @include mq(sp){
+    //     height: 80px;
+    //     padding: 0 30px;
+    // }
+
+    &__logo {
+        width: 120px;
+        height: 120px;
+        display: flex;
+        // background-color: #fff;
+
+        // background-color: $headerlogo;
+        background-color: #162B64;
+
+        opacity: 20;
+        border-radius: 50%;
+        // margin: 0 auto;
+        position: relative;
+
+
+        -webkit-box-shadow:0px 0px 2px 3px rgba(45,255,195,0.9);
+        -moz-box-shadow: 0px 0px 2px 3px rgba(45,255,195,0.9);
+        box-shadow: 0px 0px 2px 3px rgba(45,255,195,0.9);
+
+
+
+        background: -moz-linear-gradient(top,#68e2db 0%,#41aea8);
+	background: -webkit-gradient(linear, left top, left bottom, from(#68e2db), to($headerlogo));
+    background: -webkit-gradient(linear, left top, left bottom, from($headerlogo), to(#41aea8));
+	border: 1px solid #2a82a3;
+	border-radius: 70px;
+	-moz-border-radius: 70px;
+	-webkit-border-radius: 70px;
+	color: #2a82a3;
+	padding: 42px 20px 20px;
+	display: block;
+	text-align: center;
+	font-weight: bold;
+	font-size: 120%;
+	transition: background-color 0.5s ease-in;
+	-webkit-transition: background-color 0.5s ease-in;
+}
+
+&__logo--feature {
+    color: $accentYellow;
+    font-size: 24px;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 20px;
+
+    // position:absolute;
+    // top: 0;
+    left: 100px;:hover {
+	background: #2a82a3;
+	color: #FFF;
+	border: 1px solid #FFF;
+}
+
+        // @include mq(sp){
+        //     width: 88px;
+        // }
+
+    }
+    // &__logo--feature {
+    //     color: $accentYellow;
+    //     font-size: 24px;
+    //     align-items: center;
+    //     text-align: center;
+    //     margin: 0 auto;
+    //     margin-top: 50px;
+
+        // position:absolute;
+    //     top: 0;
+    //     left: 100px;
+    // }
+
+}
+
+
+//アクセスカウンターレトロ
+.rays-counterBOX {
+    width: 700px;
+    // padding: 30px;
+    // margin: 50px;
+
+}
+
+.youkoso {
+
+    font-family: "MS PGothic", "ＭＳ Ｐゴシック", "Osaka", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", Meiryo, "メイリオ", Helvetica, Arial, sans-serif;/* レトロな書体を優先 */
+    -webkit-font-smoothing: none;/* テキストのアンチエイリアスをなくす（ギザギザさせる） */
+    font-size:24px; 
+    color: lightseagreen;
+    // marquee behavior = alternate;
+    // marquee behavior = ;
+
+    // marquee scrolldelay ="" ;
+    
+}

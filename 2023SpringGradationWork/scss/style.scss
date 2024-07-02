@@ -1,0 +1,960 @@
+@use 'reset';
+@use 'header';
+@use 'mixin'as *;
+@use 'modules';
+@use 'variables'as *;
+@use 'common';
+@use 'footer';
+
+@use 'contact';
+
+.main-visual {
+    height: 100vh;
+    width: 100%;
+    // background-color: rgba(17, 62, 82, 0.533);
+    background-color: #FFFFFF;
+    margin: 0 auto;
+    align-items: center;
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // <!-- Demo styles -->
+    // <style>
+    //   html,
+    //   body {
+    //     position: relative;
+    //     height: 100%;
+    //   }
+  
+    //   body {
+    //     background: #eee;
+    //     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    //     font-size: 14px;
+    //     color: #000;
+    //     margin: 0;
+    //     padding: 0;
+    //   }
+  
+    //   .swiper {
+    //     width: 100%;
+    //     height: 100%;
+    //   }
+  
+    //   .swiper-slide {
+    //     text-align: center;
+    //     font-size: 18px;
+    //     background: #fff;
+    //     display: flex;
+    //     justify-content: center;
+    //     align-items: center;
+    //   }
+  
+    //   .swiper-slide img {
+    //     display: block;
+    //     width: 100%;
+    //     height: 100%;
+    //     object-fit: cover;
+    //   }
+    // </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 全体のスタイル */
+.swiper-container {
+	width: 100%;
+	height: 680px;
+}
+/* 全スライド共通スタイル */
+.swiper-slide {
+	color: #ffffff;
+	width: 100%;
+	// height: 125px;
+    // height: 600px;
+	text-align: center;
+	// line-height: 125px;
+    line-height: 60px;
+    padding-top: 40px;
+    margin-top: 32px;
+    padding-left: 18px;
+    padding-right: 18px;
+}
+/* 4の倍数＋1枚目のスライドのスタイル（1枚目、5枚目…） */
+.swiper-slide:nth-child(4n+1) {
+	// background-color: #EECB27;
+    background-color: $paleBanana;
+    // margin-bottom: 380px;
+
+    .topPAGEwrapper__room03 {
+        max-width: 640px;
+        background-color: $palePeach;
+
+        // opacity: 2;
+
+
+    
+    
+    
+    }
+    .Portfolio {
+        &--img {
+            max-width: 400px;
+    
+            margin-left: 110px;
+            margin-right: 110px;
+            margin: 0 auto;
+            margin-bottom: 18px;
+        }
+    }
+    
+
+
+
+
+
+
+
+
+}
+/* 4の倍数＋2枚目のスライドのスタイル（2枚目、6枚目…） */
+.swiper-slide:nth-child(4n+2) {
+	// background-color: #E13239;
+    background-color: $paleLemonSquash;
+
+    // margin-bottom: 380px;
+}
+/* 4の倍数＋3枚目のスライドのスタイル（3枚目、7枚目…） */
+.swiper-slide:nth-child(4n+3) {
+	// background-color: #1F1762;
+    background-color: $paleMelon;
+    
+
+    // margin-bottom: 80px;
+}
+/* 4の倍数＋4枚目のスライドのスタイル（4枚目、8枚目…） */
+.swiper-slide:nth-child(4n+4) {
+	background-color: #BEDAE5;
+
+//   margin-bottom: 380px;
+}
+
+
+
+
+
+}
+
+.topPAGEwrapper {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #fff;
+    align-items: center;
+    text-align: center;
+    padding-top: 50px;
+
+    // display: flex;
+    margin-bottom: 71px;
+
+    overflow: hidden;
+
+    &__room01 {
+        // width: 50%;
+        // display: flex;
+        // color: antiquewhite;
+        max-width: 640px;
+        // background-color: $palePeach;
+
+    
+
+
+    
+    
+    
+    
+    
+        
+    
+    
+    
+    
+
+    }
+    &__room02 {
+        // width: 50%;
+        // display: flex;
+        // color: antiquewhite;
+        max-width: 640px;
+        background-color: $paleLemonSquash;
+        
+    
+    
+    
+    
+    
+    
+
+    
+    
+    }
+
+    &__room03 {
+        // width: 50%;
+        // display: flex;
+        // color: antiquewhite;
+        max-width: 640px;
+        background-color: $paleMelon;
+    
+    }
+
+
+
+
+
+
+
+
+
+
+    &__room04 {
+        // width: 50%;
+        // display: flex;
+        // color: antiquewhite;
+        max-width: 640px;
+        background-color: $paleBanana;
+        
+    
+    }
+
+
+
+
+
+
+
+
+// }
+
+
+
+
+
+
+
+
+    &__portfolio01 {
+        // width: 50%;
+        // background-color: #6714bf;
+        background-color: $accentblue;
+        border-radius: 18px;
+        color: $accentYellow;
+        font-size: 36px;
+        max-width: 440px;
+
+        text-align: center;
+        margin: 0 auto;
+        // margin-top: 43px;
+        // margin-bottom: 18px;
+        // margin-left: 110px;
+        // margin-right: 110px;
+        align-items: center;
+  
+    }
+
+
+    &__portfolio02 {
+        // width: 50%;
+        // background-color: #6714bf;
+        background-color: $accentblue;
+        border-radius: 18px;
+        color: $accentYellow;
+        font-size: 36px;
+        text-align: center;
+        margin: 0 auto;
+    //     margin-top: 43px;
+    //     margin-bottom: 18px;
+    //     margin-left: 110px;
+    //     margin-right: 110px;
+        max-width: 440px;
+    // }
+
+
+
+
+
+
+
+
+
+
+
+    &__portfolio03 {
+        // width: 50%;
+        // background-color: #6714bf;
+        background-color: $accentblue;
+        border-radius: 18px;
+        color: $accentYellow;
+        font-size: 36px;
+        text-align: center;
+        margin: 0 auto;
+        // margin-top: 43px;
+        // margin-bottom: 18px;
+        // margin-left: 110px;
+        // margin-right: 110px;
+        max-width: 440px;
+    }
+
+
+
+    &__portfolio04 {
+        // width: 50%;
+        // background-color: #6714bf;
+        background-color: $accentblue;
+        border-radius: 18px;
+        color: $accentYellow;
+        font-size: 36px;
+        text-align: center;
+        margin: 0 auto;
+        // margin-top: 43px;
+        // margin-bottom: 18px;
+        // margin-left: 110px;
+        // margin-right: 110px;
+        max-width: 440px;
+    }
+}
+}
+
+
+
+
+
+.Portfolio {
+    &--img {
+        max-width: 400px;
+
+        margin-left: 110px;
+        margin-right: 110px;
+        margin: 0 auto;
+        margin-bottom: 18px;
+    }
+}
+
+.roombox01 {
+    display: flex;
+   
+}
+.roombox02 {
+    display: flex;
+}
+
+//見えない部分のスライダー
+.roombox03 {
+    display: flex;
+
+}
+
+//タイトル
+.portfolio--title01 {
+    background-color: $accentblue;
+    border-radius: 18px;
+    color: $accentYellow;
+    // padding: 10px 180px 10px 180px;
+    // text-align: center;
+    margin: 0 auto;
+    text-align: center;
+    margin: 18px;
+    font-size: 36px
+
+
+}
+
+
+//profileとスキル
+.wrapMiddle {
+    display: flex;
+    width: 78.125%;
+    margin: 0 auto;
+    max-width: 1000px;
+    margin-bottom: 100px;
+
+    // position: relative;
+    // cursor: pointer;
+}
+
+
+//複合レッド
+.mixture-REDcade {
+    position: relative;
+    cursor: pointer;
+
+    width: 50%;
+    max-width: 500px;
+    margin: 0 auto;
+    border-radius: 18px;
+    border: solid 1px #000000;
+    margin-right: 50px;
+
+    background: rgba( 255, 255, 255, 0.3 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+    // background-color: $ichiranred;
+}
+
+
+
+//左　loading
+.loading-LEFT {
+    font-size: 64px;
+    color: #BEDAE5;
+    // margin-top: 100px;
+    padding-top: 185px;
+    // margin-left: 100px;
+    padding-left: 190px;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+}
+
+//裏面カード要素
+.BACKCadeRED {
+    width: 50%;
+    max-width: 500px;
+    margin: 0 auto;
+    border-radius: 18px;
+    border: solid 1px #000000;
+    margin-right: 50px;
+
+    background: rgba( 255, 255, 255, 0.3 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+    background-color: $ichiranred;
+
+
+  
+   
+    &--element {
+
+    }
+    &--title {
+        font-size: 36px;
+        text-align: center;
+        color: $accentblue;
+        padding-top: 5px;
+        padding-bottom: 10px;
+
+
+    }
+
+}
+
+ /* 擬似要素とpadding-topでカードの高さを指定 */
+ .mixture-REDcade::before {
+    content: "";
+    display: block;
+    padding-top: 142.5%;
+
+    
+ }
+
+
+
+ /* カード裏面・表面の共通スタイル */
+ .mixture-REDcade .BACKCadeRED,
+ .mixture-REDcade .wrapSecondary__local
+ {
+  transition: all 1.7s;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+}
+
+/* カード表面のスタイル */
+.mixture-REDcade .wrapSecondary__local  {
+  transform: rotateY(-180deg);
+}
+
+/* ホバー時のカード裏面 */
+.mixture-REDcade:hover .BACKCadeRED {
+  transform: rotateY(180deg);
+}
+
+/* ホバー時のカード表面 */
+.mixture-REDcade:hover .wrapSecondary__local{
+  transform: rotateY(0);
+}
+
+
+
+
+.wrapSecondary__local {
+    width: 50%;
+    max-width: 500px;
+    margin: 0 auto;
+    border-radius: 18px;
+    border: solid 1px #000000;
+    margin-right: 50px;
+
+    background: rgba( 255, 255, 255, 0.3 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+    background-color: $ichiranred;
+
+    &--title {
+        font-size: 36px;
+        text-align: center;
+        color: $accentblue;
+        // font-weight: 500;
+        padding-top: 5px;
+        padding-bottom: 10px;
+
+    }
+    &--menubox {
+        border-radius: 18px;
+        margin: 0 auto;
+
+        text-align: center;
+    }
+
+        &--menuone {
+            border-radius: 18px;
+            border: solid 1px #000000;
+
+            text-align: center;
+            // margin: 300px;
+            // padding: 400px;
+            margin-bottom: 20px;
+            background-color: #fff;
+            margin-right: 8px;
+            margin-left: 8px;
+        }
+        &--menutwo {
+            border-radius: 18px;
+            border: solid 1px #000000;
+
+            text-align: center;
+            background-color: #fff;
+            margin-right: 8px;
+            margin-left: 8px;
+
+            margin-bottom: 5px;
+        }
+
+        
+        &--textone {
+            font-size: 24px;
+            margin-bottom: 40px;
+            margin-top: 10px;
+            
+        }
+        &--texttwo {
+            font-size: 24px;
+            margin-bottom: 20px;
+            margin-top: 10px;
+           
+        }
+    
+}
+
+
+//複合カードグリーン
+.mixture-GREENcade {
+
+    position: relative;
+    cursor: pointer;
+
+    width: 50%;
+    max-width: 500px;
+    margin: 0 auto;
+    border-radius: 18px;
+    border: solid 1px #000000;
+    margin-left: 50px;
+
+    background: rgba( 255, 255, 255, 0.3 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+    // background-color: $ichirangreen;
+
+
+
+}
+
+
+//右　loading
+.loading-RIGHT {
+    font-size: 64px;
+    color: #BEDAE5;
+    // margin-top: 100px;
+    padding-left: 185px;
+    // margin-left: 100px;
+    padding-top: 190px;
+    align-items: center;
+    margin: 0 auto;
+    text-align: center;
+}
+
+//裏面カード
+.BACKCadeGREEN {
+    width: 50%;
+    max-width: 500px;
+    margin: 0 auto;
+    border-radius: 18px;
+    border: solid 1px #000000;
+    // margin-left: 50px;
+    margin-right: 50px;
+
+    background: rgba( 255, 255, 255, 0.3 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+    background-color: $ichirangreen;
+
+    
+
+
+    &--element {
+
+    }
+    &--title {
+        font-size: 36px;
+        text-align: center;
+        color: $accentblue;
+        padding-top: 5px;
+        padding-bottom: 10px;
+
+    }
+} 
+
+
+/* 擬似要素とpadding-topでカードの高さを指定 */
+.mixture-GREENcade::before {
+    content: "";
+    display: block;
+    padding-top: 142.5%;
+  }
+  
+  /* カード内の画像 */
+//   .card img {
+//     width: 100%;
+//   }
+
+/* カード裏面・表面の共通スタイル */
+.mixture-GREENcade .BACKCadeGREEN,
+.mixture-GREENcade .wraptertiary__local {
+  transition: all 1.7s;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+}
+  
+ 
+  /* カード表面のスタイル */
+  .mixture-GREENcade  .wraptertiary__local {
+    transform: rotateY(-180deg);
+  }
+  
+  /* ホバー時のカード裏面 */
+  .mixture-GREENcade:hover .BACKCadeGREEN {
+    transform: rotateY(180deg);
+  }
+  
+  /* ホバー時のカード表面 */
+  .mixture-GREENcade:hover  .wraptertiary__local {
+    transform: rotateY(0);
+  }
+
+.wraptertiary__local {
+    width: 50%;
+    max-width: 500px;
+    margin: 0 auto;
+    // border-radius: 18px;
+    border-radius: 50px;
+    border: solid 1px #000000;
+    // margin-left: 50px;
+    margin-right: 50px;
+
+    background: rgba( 255, 255, 255, 0.3 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+    background-color: $ichirangreen;
+
+
+    &--title {
+        font-size: 36px;
+        text-align: center;
+        color: $accentblue;
+        padding-top: 5px;
+        padding-bottom: 10px;
+
+    }
+    &--menubox {
+        border-radius: 18px;
+        border: solid 1px #000000;
+        margin: 0 auto;
+        background-color: #fff;
+        margin-right: 8px;
+        margin-left: 8px;
+        justify-content: space-around;
+        padding: 8px;
+        text-align: center;
+        align-items: center;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+
+
+
+
+
+      
+
+    }
+
+
+    &--menu001 {
+        width: 50%;
+        max-width: 120px;
+
+        border: solid 1px #000000;
+        border-radius: 7px;
+
+        margin-right: 10px;
+        margin-bottom: 10px;
+
+    // background: rgba( 255, 255, 255, 0.3 );
+    background-color: aquamarine;
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+    &:hover {
+        animation: hoverShake 0.15s linear 3;
+        opacity: 0.8;
+      }
+      
+      @keyframes hoverShake {
+        0% {transform: skew(0deg,0deg);}
+        25% {transform: skew(1deg, 1deg);}
+        75% {transform: skew(-1deg, -1deg);}
+        100% {transform: skew(0deg,0deg);}
+      }
+
+
+
+    }
+    &--htmlbox001 {
+
+    }
+&--html001 {
+    // border: solid 1px #000000;
+    // border-radius: 7px;
+
+    // background: rgba( 255, 255, 255, 0.3 );
+    // box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    // backdrop-filter: blur( 4px );
+    // -webkit-backdrop-filter: blur( 4px );
+    // border-radius: 10px;
+    // border: 1px solid rgba( 255, 255, 255, 0.18 );
+    font-size: 24px;
+}
+
+    &--menu002 {
+        width: 50%;
+        max-width: 120px;
+
+        border: solid 1px #000000;
+        border-radius: 7px;
+
+        margin-right: 10px;
+        
+
+    // background: rgba( 255, 255, 255, 0.3 );
+    background-color: lightpink;
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+    &:hover {
+        animation: hoverShake 0.15s linear 3;
+        opacity: 0.8;
+      }
+
+      
+      @keyframes hoverShake {
+        0% {transform: skew(0deg,0deg);}
+        25% {transform: skew(1deg, 1deg);}
+        75% {transform: skew(-1deg, -1deg);}
+        100% {transform: skew(0deg,0deg);}
+      }
+
+    }
+    &--cssbox002 {
+        
+    }
+    &--css002 {
+        font-size: 24px;
+}
+
+
+
+
+
+
+
+    &--menu003 {
+        width: 50%;
+        max-width: 120px;
+
+        border: solid 1px #000000;
+        border-radius: 7px;
+
+        margin-right: 10px;
+        
+
+    // background: rgba( 255, 255, 255, 0.3 );
+    background-color: rgb(225, 213, 118);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+    &:hover {
+        animation: hoverShake 0.15s linear 3;
+        opacity: 0.8;
+      }
+
+      
+      @keyframes hoverShake {
+        0% {transform: skew(0deg,0deg);}
+        25% {transform: skew(1deg, 1deg);}
+        75% {transform: skew(-1deg, -1deg);}
+        100% {transform: skew(0deg,0deg);}
+      }
+
+    }
+
+
+    &--jsbox003 {
+        
+    }
+    &--js003 {
+        font-size: 24px;
+    }
+
+
+
+
+    &--menu004 {
+        width: 50%;
+        max-width: 120px;
+
+        border: solid 1px #000000;
+        border-radius: 7px;
+        
+
+    // background: rgba( 255, 255, 255, 0.3 );
+    background-color: rgb(82, 159, 203);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+    &:hover {
+        animation: hoverShake 0.15s linear 3;
+        opacity: 0.8;
+      }
+
+      
+      @keyframes hoverShake {
+        0% {transform: skew(0deg,0deg);}
+        25% {transform: skew(1deg, 1deg);}
+        75% {transform: skew(-1deg, -1deg);}
+        100% {transform: skew(0deg,0deg);}
+      }
+
+    }
+
+    &--phpbox004 {
+
+    }
+    &--php004 {
+        font-size: 24px;
+    }
+
+}
+
+

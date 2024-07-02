@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio-contactpage</title>
+
+     <!-------------- Swiper CSS ------------------------------------------------------------->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.4.1/swiper-bundle.min.css"> -->
+
+
+
+    <!-- Google Fonts CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500&family=Noto+Sans+JP:wght@400;500&family=Noto+Serif+JP:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <!-- style.css -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="main-visual">
+        <header class="header">
+            <div class="header__logo">
+                <h1 class="header__logo--feature"><a href="./index.html">Logo</a></h1>
+            </div>
+
+            <nav class="navigation">
+                <ul class="navigation-menu">
+
+                    <li class="navigation-menu__link"><a href="#"><i class="fa-brands fa-twitter SNS"></i></a></li>
+                    <li class="navigation-menu__link"><a href="#"><i class="fa-brands fa-instagram SNS"></i></a></li>
+                    <li class="navigation-menu__link"><a href="#"><i class="fa-brands fa-facebook SNS"></i></a></li>
+                    <li class="navigation-menu__link"><a href="#"><i class="fa-brands fa-line SNS"></i></a></li>
+                    <li class="navigation-menu__link"><a href="#"><i class="fa-brands fa-github SNS"></i></a></li>
+                    <li class="navigation-menu__link"><a href="#"><i class="fa-solid fa-clipboard SNS"></i></a></li>
+                </ul>
+
+            </nav>
+            
+            
+        </header>
+
+        <main class="mainContact">
+            <form action="" class="form">
+                <h2 class="form__unit"><span class="form__unit--title">Contact</span></h2>
+                <div class="form__outer">
+                    <div class="form__inner">
+                        <div class="form__inner--left">
+                            <p class="form__inner--mailbox">
+                                <span class="form__inner--mail">mail</span>
+
+                                <p class="alert"></p>
+                            </p>
+                       
+
+                        </div>
+                        <div class="form__inner--right">
+                            <input type="mail" class="mail-input">
+                        </div>
+                    </div>
+
+                    <div class="form__inner">
+                        <div class="form__inner--left">
+                            <p class="form__inner--telbox">
+                                <span class="form__inner--tel">
+                                    番号
+                                </span>
+
+                                <p class="alert"></p>
+                            </p>
+                    
+
+                        </div>
+                        <div class="form__inner--right">
+                            <input type="tel"  name="yourtelephone" id="telephone" placeholder="" class="tel-input">
+                        </div>
+                    </div>
+
+                    <div class="form__inner">
+                        <div class="form__inner--left">
+                            <p class="form__inner--rquestbox">
+                                <span class="form__inner--rquest">
+                                    ご依頼
+                                </span>
+                            </p>
+                            <p class="contact_title">依頼内容
+                                <select name="menu-403" class="form-input form-input--required" aria-required="true" aria-invalid="false"><option value="" class="omote">---</option><option value="コーディング">コーディング</option><option value="デザイン">デザイン</option><option value="アニメーション">アニメーション</option><option value="イラストレーション">イラストレーション</option><option value="その他">その他</option></select>
+                            </p>
+                
+                        </div>
+                        <div class="form__inner--right">
+                            <textarea name="" id="" cols="30" rows="10" class="textarea"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form__inner">
+                        <div class="form__inner--left">
+
+                            <p class="form__inner--questionbox">
+                                <span class="form__inner--question">
+                                    ご質問
+
+                                </span>
+                            </p>
+                        </div>
+                        <div class="form__inner--right">
+                            <textarea name="" id="" cols="30" rows="10" class="textarea"></textarea>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="submit__button">
+    
+                    <input type="submit" value="送信" class="submit__button--element">
+                </div>
+
+            </form>
+        </main>
+
+
+
+    
+
+
+        <footer class="footer">
+            <div class="footer__box">
+
+                <p class="footer__link--Contact"><a href="./index.html">TOP</a></p>
+            </div>
+            
+            
+            <div class="BACKTOPbtn">
+                <p class="BACKTOP--yellowL"></p>
+                <p class="BACKTOP--yellowR"></p>
+                <i class="fa-solid fa-arrow-up btn-up"></i>
+            </div>
+
+        </footer>
+    </div>
+
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/ScrollTrigger.min.js"></script>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+    <!-- <script src="js/dark-mode.js"></script> -->
+    <!-- <script src="js/modal.js"></script> -->
+     <!-------------- Swiper JS -------------------------------------------------------------->
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.4.1/swiper-bundle.min.js"> -->
+    <script src="js/script.js"></script>
+</body>
+</html>

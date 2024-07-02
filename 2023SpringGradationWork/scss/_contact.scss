@@ -1,0 +1,317 @@
+@use 'variables'as *;
+@use 'mixin'as *;
+
+
+
+.mainContact {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.form {
+    background-color: $paleBanana;
+    width: 80%;
+    border: solid 1px #000000;
+    margin: 0 auto;
+
+    margin-bottom: 145px;
+    // padding-bottom: 145px;
+    // padding-top: 75px;
+    margin-top: 75px;
+    border-radius: 18px;
+
+
+    // background: rgba( 255, 255, 255, 0.3 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+    &__unit {
+        background-color: $paleLemonSquash;
+        // height: 60px;
+        max-width: 256px;
+        border: 1px solid #000000;
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 54px;
+        padding-top: 10px;
+        margin-bottom: 46px;
+        padding-bottom: 10px;
+        border-radius: 18px;
+
+
+        // background: rgba( 255, 255, 255, 0.3 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+
+        &--title {
+            color: $accentblue;
+            font-size: 36px;
+            text-align: center;
+            padding-top: 12px;
+            padding-bottom: 12px;
+            padding-left: 20px;
+            padding-right: 20px;
+
+            margin: 12px;
+            margin: 12px;
+            margin: 20px;
+            margin: 20px;
+
+        }
+
+    }
+}
+
+
+.form__outer{
+    // width: 100%;
+    width: 75.6756%;
+    max-width: 560px;
+    background-color: $palePeach;
+    border-radius: 18px;
+    border: solid 1px #000000;
+    margin: 0 auto;
+
+
+
+    // background: rgba( 255, 255, 255, 0.3 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+        &__innertelbox {
+            
+        }
+    }
+
+
+
+.form__inner {
+    display: flex;
+    margin: 0 auto;
+    // max-width: 402+148;
+    min-width: 550px;
+    width: 100%;
+    margin-top: 38px;
+    margin-left: 25px;
+    margin-right: 20px;
+
+
+    // background: rgba( 255, 255, 255, 0.3 );
+    // box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    // backdrop-filter: blur( 4px );
+    // -webkit-backdrop-filter: blur( 4px );
+    // border-radius: 10px;
+    // border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+
+
+    &__inner--left {
+        margin: 0 auto;
+        max-width: 148px;
+
+    }
+
+    &--mailbox {
+        background-color: $accentblue;
+        padding-left: 10px;
+        padding-right: 10px;
+        // padding-top: 8px;
+        // padding-bottom: 8px;
+        border-radius: 18px;
+        max-width: 120px;
+
+        display: flex;
+    }
+    &--mail {
+        color: $accentYellow;
+        font-size: 20px;
+        margin: 12px;
+            margin: 12px;
+            margin: 20px;
+            margin: 20px;
+    }
+
+    &--right {
+        // width: 600px;
+        margin: 0 auto;
+        max-width: 402px;
+    }
+
+
+    
+
+    &--telbox {
+        background-color: $accentblue;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        border-radius: 18px;
+        max-width: 120px;
+
+        display: flex;
+    }
+
+    &--tel {
+        color: $accentYellow;
+        font-size: 20px;
+        margin-bottom: 12px;
+            margin-top: 12px;
+            margin-left: 20px;
+            margin-right: 20px;
+    }
+
+    &--rquestbox {
+        background-color: $accentblue;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        border-radius: 18px;
+        max-width: 120px;
+    }
+
+    &--rquest {
+        color: $accentYellow;
+        font-size: 20px;
+
+        margin: 12px;
+            margin: 12px;
+            margin: 20px;
+            margin: 20px;
+    }
+
+
+    .contact_title {
+        background-color: aquamarine;
+        // color: #fff;
+        display: flex;
+        flex-direction: column;
+        border: solid 1px #000000;
+        border-radius: 8px;
+        width: 120px;
+        margin-top: 6px;
+
+    }
+    .form-input .form-input--required {
+        background-color: #FFFFFF;
+    }
+    .omote {
+        background-color: #FFFFFF;
+    }
+
+
+
+    &--questionbox {
+        background-color: $accentblue;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        border-radius: 18px;
+        max-width: 120px;
+
+
+    }
+    &--question {
+        color: $accentYellow;
+        font-size: 20px;
+
+        margin-top: 12px;
+            margin-bottom: 12px;
+            margin-left: 20px;
+            margin-right: 20px;
+
+    }
+
+}
+
+.alert {
+    background-color: red;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    // display: flex;
+}
+
+
+.tel-input {
+    background-color: #fff;
+    width: 340px;
+    border: solid 1px #000000;
+    height: 38px;
+    border-radius: 18px;
+
+    margin: 8px 20px 8px 20px;
+
+    
+}
+
+.mail-input {
+    background-color: #fff;
+    width: 340px;
+    border: solid 1px #000000;
+    height: 38px;
+    border-radius: 18px;
+    margin: 8px 20px 8px 20px;
+    
+}
+
+.textarea {
+    background-color: #fff;
+    width: 340px;
+    border: solid 1px #000000;
+    border-radius: 18px;
+    height: 80px;
+    margin-bottom: 50px;
+    // margin-top: 50px;
+
+    
+}
+
+.submit__button {
+    background-color: $paleMelon;
+    text-align: center;
+    align-items: center;
+    max-width: 160px;
+    // height: 60px;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 18px;
+    border: solid 1px #000000;
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+
+    // background: rgba( 255, 255, 255, 0.3 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    
+    &__button{
+        font-size: 24px;
+    text-align: center;
+    align-items: center;
+    margin: 0 auto;
+    color: $accentblue;
+
+
+
+    
+   
+
+    }
+}

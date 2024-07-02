@@ -1,0 +1,47 @@
+@use 'variables'as *;
+@use 'mixin'as *;
+
+.navigation {
+    // @include mq(sp){
+    //     display: none;
+    // }
+    justify-content: space-between;
+    max-width: 300px;
+    background-color: $accentblue;
+    border-radius: 10px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+
+    &__link {
+        // font-family: ;
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    &-menu {
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    &__link {
+        // font-size: 24px;
+        justify-content: space-between;
+
+
+    }
+}
+
+// .fa-brands .fa-twitter {
+//     font-size: 24px;
+// }
+.SNS {
+    font-size: 32px;
+    justify-content: space-between;
+    margin: 5px;
+    color: $accentblue;
+    background-color: aquamarine;
+}
+
+
+// .btn
