@@ -1,0 +1,540 @@
+body.page {
+    background: linear-gradient(90deg, #ff0000, #ffa500, #ffff00, #008000, #0000ff, #4b0082, #ee82ee);
+    background-size: 1500% 1500%;
+    animation: page__bgColorChange 60s ease infinite;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+@keyframes page__bgColorChange {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.page__container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.animalRunning__container {
+    width: 70%;
+    height: 155px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    position: relative;
+    border-bottom: 10px #0b1ecf solid;
+    margin: 10px 0;
+    padding-left: 50px;
+}
+
+.animalRunning__label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-weight: bold;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+.animal {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    /* animation: animalRunning__moveAnimal 8s linear infinite; */
+    animation: animalRunning__moveAnimal 20s linear infinite;
+}
+
+@keyframes animalRunning__moveAnimal {
+    0% { left: -100px; }
+    50% { left: calc(100% - 50px); }
+    100% { left: -100px; }
+}
+
+
+
+
+
+
+
+.animal__body {
+    position: relative;
+    width: 50px;
+    height: 30px;
+    background-color: black;
+    border-radius: 20px;
+}
+
+.animal__tail {
+    position: absolute;
+    bottom: 0;
+    left: -10px;
+    width: 20px;
+    height: 5px;
+    background-color: black;
+    border-radius: 10px;
+    transform: rotate(30deg);
+}
+
+.animal__head {
+    position: absolute;
+    top: -15px;
+    left: 10px;
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.animal__ear {
+    position: absolute;
+    top: -10px;
+    width: 10px;
+    height: 20px;
+    background-color: black;
+    clip-path: polygon(50% 0%, 0% 80%, 80% 100%);
+}
+
+.animal__ear--left {
+    left: 0;
+}
+
+.animal__ear--right {
+    right: 0;
+}
+
+.animal__eye {
+    position: absolute;
+    top: 5px;
+    width: 3px;
+    height: 3px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.animal__eye--left {
+    left: 5px;
+}
+
+.animal__eye--right {
+    right: 5px;
+}
+
+.animal__leg {
+    position: absolute;
+    bottom: 0;
+    width: 5px;
+    height: 15px;
+    background-color: black;
+    border-radius: 5px;
+}
+
+.animal__leg--front {
+    left: 5px;
+    animation: animalRunning__legMove 0.5s infinite alternate;
+}
+
+.animal__leg--back {
+    right: 5px;
+    animation: animalRunning__legMove 0.5s infinite alternate-reverse;
+}
+
+@keyframes animalRunning__legMove {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(20deg);
+    }
+}
+
+/* Add specific styles for each animal */
+
+
+
+
+
+
+/* Tiger */
+.animal--tiger .animal__body {
+    width: 43px;
+    height: 35px;
+    background-color: orange;
+    border-radius: 20px;
+}
+
+.animal--tiger .animal__tail {
+    width: 25px;
+    height: 5px;
+    background-color: orange;
+    transform: rotate(20deg);
+}
+
+.animal--tiger .animal__head {
+    top: -18px;
+    left: 15px;
+    width: 25px;
+    height: 25px;
+    background-color: orange;
+}
+
+.animal--tiger .animal__ear {
+    top: -12px;
+    height: 15px;
+    clip-path: polygon(50% 0%, 0% 70%, 70% 100%);
+}
+
+.animal--tiger .animal__eye {
+    position: absolute;
+    top: 5px;
+    width: 3px;
+    height: 3px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.animal--tiger .animal__eye--left {
+    left: 5px;
+}
+
+.animal--tiger .animal__eye--right {
+    right: 5px;
+}
+
+.animal--tiger .animal__leg {
+    position: absolute;
+    bottom: 0;
+    width: 5px;
+    height: 15px;
+    background-color: black;
+    border-radius: 5px;
+}
+
+.animal--tiger .animal__leg--front {
+    left: 5px;
+    animation: animalRunning__legMove 0.5s infinite alternate;
+}
+
+.animal--tiger .animal__leg--back {
+    right: 5px;
+    animation: animalRunning__legMove 0.5s infinite alternate-reverse;
+}
+
+/* Lion */
+.animal--lion .animal__body {
+    width: 90px;
+    height: 40px;
+    background-color: goldenrod;
+    border-radius: 20px;
+}
+
+.animal--lion .animal__tail {
+    width: 30px;
+    height: 5px;
+    background-color: goldenrod;
+    transform: rotate(20deg);
+}
+
+.animal--lion .animal__head {
+    top: -20px;
+    left: 20px;
+    width: 30px;
+    height: 30px;
+    background-color: goldenrod;
+    border-radius: 50%;
+}
+
+.animal--lion .animal__mane {
+    position: absolute;
+    top: -15px;
+    left: -10px;
+    width: 50px;
+    height: 50px;
+    background-color: brown;
+    border-radius: 50%;
+}
+
+.animal--lion .animal__ear {
+    top: -10px;
+    height: 20px;
+    clip-path: polygon(50% 0%, 0% 70%, 70% 100%);
+}
+
+.animal--lion .animal__eye {
+    position: absolute;
+    top: 10px;
+    width: 5px;
+    height: 5px;
+    background-color: rgba(7, 80, 58, 0.336);
+    border-radius: 50%;
+}
+
+.animal--lion .animal__eye--left {
+    left: 5px;
+}
+
+.animal--lion .animal__eye--right {
+    right: 5px;
+}
+
+.animal--lion .animal__tooth--left {
+    position: absolute;
+    bottom: -2px;
+    left: 5px;
+    width: 5px;
+    height: 10px;
+    background-color: white;
+    border-radius: 0 0 2px 2px;
+}
+
+.animal--lion .animal__head:hover .animal__tooth {
+    animation: animalRunning__roar 1s infinite;
+}
+
+.animal--lion .animal__tooth--right {
+    position: absolute;
+    bottom: -2px;
+    left: 22px;
+    width: 5px;
+    height: 10px;
+    background-color: white;
+    border-radius: 0 0 2px 2px;
+}
+
+.animal--lion .animal__head:hover .animal__tooth {
+    animation: animalRunning__roar 1s infinite;
+}
+
+
+@keyframes animalRunning__roar {
+    0%, 100% { height: 10px; }
+    50% { height: 20px; }
+}
+
+/* Cat */
+.animal--cat .animal__body {
+    width: 50px;
+    height: 30px;
+    background-color: black;
+    border-radius: 20px;
+}
+
+.animal--cat .animal__tail {
+    width: 20px;
+    height: 5px;
+    background-color: black;
+    transform: rotate(30deg);
+}
+
+.animal--cat .animal__head {
+    top: -15px;
+    left: 10px;
+    width: 20px;
+    height: 20px;
+    background-color: black;
+}
+
+.animal--cat .animal__ear {
+    top: -10px;
+    height: 15px;
+    clip-path: polygon(50% 0%, 0% 80%, 80% 100%);
+}
+
+.animal--cat .animal__eye {
+    position: absolute;
+    top: 5px;
+    width: 3px;
+    height: 3px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.animal--cat .animal__eye--left {
+    left: 5px;
+}
+
+.animal--cat .animal__eye--right {
+    right: 5px;
+}
+
+.animal--cat .animal__leg {
+    position: absolute;
+    bottom: 0;
+    width: 5px;
+    height: 20px;
+    background-color: rgb(15, 15, 14);
+    border-radius: 5px;
+}
+
+.animal--cat .animal__leg--front {
+    left: 5px;
+    animation: animalRunning__legMove 0.5s infinite alternate;
+}
+
+.animal--cat .animal__leg--back {
+    right: 5px;
+    animation: animalRunning__legMove 0.5s infinite alternate-reverse;
+}
+
+/* Dog (Wolf) */
+.animal--wolf .animal__body {
+    width: 45px;
+    height: 35px;
+    background-color: gray;
+    border-radius: 20px;
+}
+
+.animal--wolf .animal__tail {
+    width: 25px;
+    height: 5px;
+    background-color: gray;
+    transform: rotate(20deg);
+}
+
+.animal--wolf .animal__head {
+    top: -18px;
+    left: 15px;
+    width: 25px;
+    height: 25px;
+    background-color: gray;
+}
+
+.animal--wolf .animal__ear {
+    top: -12px;
+    height: 15px;
+    clip-path: polygon(50% 0%, 0% 70%, 70% 100%);
+}
+
+.animal--wolf .animal__eye {
+    position: absolute;
+    top: 5px;
+    width: 3px;
+    height: 3px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.animal--wolf .animal__eye--left {
+    left: 5px;
+}
+
+.animal--wolf .animal__eye--right {
+    right: 5px;
+}
+
+.animal--wolf .animal__nose {
+    position: absolute;
+    top: 10px;
+    left: 8px;
+    width: 5px;
+    height: 5px;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.animal--wolf .animal__leg {
+    position: absolute;
+    bottom: 0;
+    width: 5px;
+    height: 15px;
+    background-color: gray;
+    border-radius: 5px;
+}
+
+.animal--wolf .animal__leg--front {
+    left: 5px;
+    animation: animalRunning__legMove 0.5s infinite alternate;
+}
+
+.animal--wolf .animal__leg--back {
+    right: 5px;
+    animation: animalRunning__legMove 0.5s infinite alternate-reverse;
+}
+
+/* Bird (Penguin) */
+.animal--bird .animal__body {
+    width: 30px;
+    height: 40px;
+    background-color: blue;
+    border-radius: 20px;
+}
+
+.animal--bird .animal__wing {
+    position: absolute;
+    top: 10px;
+    width: 10px;
+    height: 20px;
+    background-color: blue;
+    border-radius: 5px;
+}
+
+.animal--bird .animal__wing--left {
+    left: -15px;
+    animation: animalRunning__wingMove 0.5s infinite alternate;
+}
+
+.animal--bird .animal__wing--right {
+    right: -18px;
+    animation: animalRunning__wingMove 0.5s infinite alternate-reverse;
+}
+
+.animal--bird .animal__head {
+    position: absolute;
+    top: -20px;
+    left: 10px;
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.animal--bird .animal__eye {
+    position: absolute;
+    top: 5px;
+    width: 3px;
+    height: 3px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.animal--bird .animal__eye--left {
+    left: 5px;
+}
+
+.animal--bird .animal__eye--right {
+    right: 5px;
+}
+
+.animal--bird .animal__beak {
+    position: absolute;
+    top: 8px;
+    left: 5px;
+    width: 10px;
+    height: 5px;
+    background-color: orange;
+    transform: rotate(45deg);
+    border-radius: 0 0 10px 10px;
+}
+
+@keyframes animalRunning__wingMove {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(20deg);
+    }
+}
+
+/* Additional specific styles for each animal as needed */

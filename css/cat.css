@@ -10,6 +10,28 @@
     position: relative;
 
     border-bottom: 10px #0b1ecf solid;
+
+
+
+
+    /* 調整中 */
+    /* お試しゲーミングカラー背景 */
+    background: linear-gradient(70deg, #ff0000, #ffa500, #ffff00, #008000, #0000ff, #4b0082, #ee82ee);
+
+
+    /* background-size: 1500% 1500%; */
+    background-size: 100%;
+    animation: page__bgColorChange 60s ease infinite;
+    /* animation: page__bgColorChange 60s ease infinite; */
+    opacity: 0.58;
+
+    @keyframes page__bgColorChange {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+}
+
+
 }
 
 .cat {
