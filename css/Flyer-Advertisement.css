@@ -1,0 +1,199 @@
+/* 基本設定 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* カラー変数 */
+  :root {
+    --primary-color: #333;
+    --secondary-color: #555;
+    --accent-color: #f39c12;
+    --background-color: #f4f4f4;
+    --text-color: #333;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+  }
+  
+  /* 全体のレイアウト */
+  body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+  }
+  
+  /* ヘッダー */
+  .header {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px var(--shadow-color);
+  }
+  
+  .header__logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .header__nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .header__nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+  }
+  
+  .header__nav a:hover {
+    background-color: var(--secondary-color);
+  }
+  
+  /* メインビジュアル */
+  .home__main-visual {
+    background: url("../images/SunabacoCafe--Entrance.png") no-repeat center center/cover;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-shadow: 0 2px 4px var(--shadow-color);
+  }
+  
+  /* 紹介セクション */
+  .home__intro {
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  .home__intro h2 {
+    margin-bottom: 10px;
+    font-size: 2rem;
+  }
+  
+  .home__intro p {
+    font-size: 1.1rem;
+    color: var(--secondary-color);
+  }
+  
+  /* 作品ギャラリー */
+  .home__gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .home__gallery--flyer,
+  .home__gallery--advertisement,
+  .home__gallery--ecommerce,
+  .home__gallery--photo,
+  .home__gallery--design,
+  .home__gallery--art {
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 0 2px 4px var(--shadow-color);
+    margin-bottom: 20px;
+    width: 48%;
+  }
+  
+  .home__gallery img {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* クライアントの声 */
+  .home__testimonials {
+    background-color: var(--accent-color);
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  .home__testimonials h2 {
+    margin-bottom: 10px;
+    font-size: 2rem;
+  }
+  
+  .home__testimonials p {
+    font-size: 1.1rem;
+  }
+  
+  /* CTAセクション */
+  .home__cta {
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  .home__cta h2 {
+    margin-bottom: 10px;
+    font-size: 2rem;
+  }
+  
+  .home__cta button {
+    background-color: var(--accent-color);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .home__cta button:hover {
+    background-color: var(--secondary-color);
+  }
+  
+  /* フッター */
+  .footer {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  .footer__contact,
+  .footer__ads-inquiry,
+  .footer__copyright,
+  .footer__social {
+    margin-bottom: 10px;
+  }
+  
+  .footer__social a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+  }
+  
+  .footer__social a:hover {
+    color: var(--accent-color);
+  }
+  
+  /* レスポンシブ対応 */
+  @media (max-width: 768px) {
+    .home__gallery--flyer,
+    .home__gallery--advertisement,
+    .home__gallery--ecommerce,
+    .home__gallery--photo,
+    .home__gallery--design,
+    .home__gallery--art {
+      width: 100%;
+    }
+  
+    .header__nav ul {
+      flex-direction: column;
+    }
+  
+    .header__nav li {
+      margin-bottom: 10px;
+    }
+  }
+  
