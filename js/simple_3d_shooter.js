@@ -188,7 +188,24 @@ function update() {
     requestAnimationFrame(update);
 }
 
+
+// スペースキーや十字キー動く
+// function keyDownHandler(e) {
+//     if (e.key === 'ArrowLeft') player.move('left');
+//     if (e.key === 'ArrowRight') player.move('right');
+//     if (e.key === 'ArrowUp') player.move('up');
+//     if (e.key === 'ArrowDown') player.move('down');
+//     if (e.key === ' ') {
+//         bullets.push(new Bullet(player.x + player.width / 2 - 5, player.y));
+//     }
+// }
+// スペースキーや十字キー動かない
 function keyDownHandler(e) {
+    if (e.key === 'ArrowLeft' || e.key === 'ArrowRight' || e.key === 'ArrowUp' || e.key === 'ArrowDown' || e.key === ' ') {
+        e.preventDefault();  // ブラウザのデフォルト動作を防ぐ
+    }
+
+
     if (e.key === 'ArrowLeft') player.move('left');
     if (e.key === 'ArrowRight') player.move('right');
     if (e.key === 'ArrowUp') player.move('up');
@@ -198,9 +215,16 @@ function keyDownHandler(e) {
     }
 }
 
+// スペースキーや十字キー動く
+// function keyUpHandler(e) {
+//     if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') player.stop();
+//     if (e.key === 'ArrowUp' || e.key === 'ArrowDown') player.stop();
+// }
+// スペースキーや十字キー動かない
 function keyUpHandler(e) {
-    if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') player.stop();
-    if (e.key === 'ArrowUp' || e.key === 'ArrowDown') player.stop();
+    if (e.key === 'ArrowLeft' || e.key === 'ArrowRight' || e.key === 'ArrowUp' || e.key === 'ArrowDown') {
+        player.stop();
+    }
 }
 
 document.addEventListener('keydown', keyDownHandler);

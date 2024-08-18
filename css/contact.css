@@ -1,0 +1,136 @@
+/* 基本設定 */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #253670;
+    color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+}
+
+/* コンテナ設定 */
+.contact-page__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #2A45BD;
+    border-radius: 8px;
+}
+
+/* セクション設定 */
+.contact-page__section {
+    margin-bottom: 30px;
+}
+
+.contact-page__section-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* フォーム設定 */
+.contact-form__group {
+    margin-bottom: 20px;
+}
+
+.contact-form__label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+.contact-form__input, 
+.contact-form__textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #CCCCCC;
+    border-radius: 4px;
+    color: #333333;
+}
+
+.contact-form__textarea {
+    height: 100px;
+    resize: none;
+}
+
+.contact-form__button {
+    background-color: #253670;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.contact-form__button:hover {
+    background-color: #1f2d5c;
+}
+
+/* 項目設定 */
+.contact-page__container-item {
+    background-color: #FFFFFF;
+    color: #333333;
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.contact-page__item-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.contact-page__item-description {
+    font-size: 14px;
+}
+
+/* SNSリンク設定 */
+.sns-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+}
+
+.sns-links__item {
+    margin-right: 10px;
+}
+
+.sns-links__link {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.sns-links__link:hover {
+    text-decoration: underline;
+}
+
+/* フッター設定 */
+.footer {
+    background-color: #1f2d5c;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer__text {
+    margin: 0;
+    color: #FFFFFF;
+    font-size: 14px;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .contact-page__container {
+        padding: 15px;
+    }
+
+    .sns-links {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .sns-links__item {
+        margin-right: 0;
+    }
+}
