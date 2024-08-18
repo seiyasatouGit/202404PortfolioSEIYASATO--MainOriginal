@@ -1,14 +1,111 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta>
     <title>Simple POS</title>
-    <!-- <script src="app.js"></script> -->
-    <script src="js/POS.js"></script>
+    <link rel="stylesheet" href="css/pos.css">
+        <!-- <script src="app.js"></script> -->
+        <!-- <script src="js/POS.js"></script> -->
 </head>
 <body>
     <h1>Simple POS System</h1>
     <pre id="inventory"></pre>
     <input type="text" id="item_id" placeholder="Enter item ID">
     <button onclick="sellItem()">Sell Item</button>
+
+
+
+
+
+    <!-- 商品管理フォーム -->
+<div>
+    <h2>商品管理</h2>
+    <form id="product-form">
+        <input type="text" id="product-name" placeholder="商品名">
+        <input type="number" id="product-price" placeholder="価格">
+        <input type="number" id="product-quantity" placeholder="在庫数">
+        <button type="submit">追加/更新</button>
+    </form>
+</div>
+
+<!-- 商品リスト -->
+<div>
+    <h2>商品リスト</h2>
+    <input type="text" id="search-bar" placeholder="商品検索">
+    <table id="product-table">
+        <thead>
+            <tr>
+                <th>商品名</th>
+                <th>価格</th>
+                <th>在庫数</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- 商品行がここに追加される -->
+        </tbody>
+    </table>
+</div>
+
+
+
+<!-- カート -->
+<div>
+    <h2>カート</h2>
+    <ul id="cart-items">
+        <!-- カート内の商品がここに追加される -->
+    </ul>
+    <div>
+        <strong>合計:</strong> <span id="total-amount">0</span> 円
+    </div>
+    <button id="checkout-button">支払い</button>
+</div>
+
+
+<!-- ログインフォーム -->
+<div>
+    <h2>ログイン</h2>
+    <form id="login-form">
+        <input type="text" id="username" placeholder="ユーザー名">
+        <input type="password" id="password" placeholder="パスワード">
+        <button type="submit">ログイン</button>
+    </form>
+</div>
+
+
+
+<!-- レポート -->
+<div>
+    <h2>売上レポート</h2>
+    <form id="report-filter">
+        <input type="date" id="start-date">
+        <input type="date" id="end-date">
+        <button type="submit">表示</button>
+    </form>
+    <div id="report-results">
+        <!-- 売上データがここに表示される -->
+    </div>
+    <canvas id="sales-chart"></canvas> <!-- グラフ表示用 -->
+</div>
+
+
+
+<!-- レポート -->
+<div>
+    <h2>売上レポート</h2>
+    <form id="report-filter">
+        <input type="date" id="start-date">
+        <input type="date" id="end-date">
+        <button type="submit">表示</button>
+    </form>
+    <div id="report-results">
+        <!-- 売上データがここに表示される -->
+    </div>
+    <canvas id="sales-chart"></canvas> <!-- グラフ表示用 -->
+</div>
+
+
+<!-- <script src="app.js"></script> -->
+<script src="js/POS.js"></script>
 </body>
 </html>

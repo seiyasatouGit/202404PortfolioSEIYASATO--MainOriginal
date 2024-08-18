@@ -35,3 +35,12 @@ def sell_item():
 if __name__ == '__main__':
     print("sys.path:", sys.path)  # sys.pathを出力して確認する
     app.run(debug=True)
+
+
+
+
+
+
+
+
+

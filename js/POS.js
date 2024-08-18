@@ -18,3 +18,27 @@ async function sellItem() {
 }
 
 window.onload = loadInventory;
+
+
+
+
+
+
+
+
+
+
+
+document.getElementById('checkout-button').addEventListener('click', function() {
+    alert('お会計が完了しました。');
+});
+
+// 商品検索フィルター
+document.getElementById('search-bar').addEventListener('keyup', function() {
+    let filter = this.value.toUpperCase();
+    let rows = document.querySelectorAll('#product-table tbody tr');
+    rows.forEach(row => {
+        let productName = row.querySelector('td:first-child').textContent.toUpperCase();
+        row.style.display = productName.indexOf(filter) > -1 ? '' : 'none';
+    });
+});

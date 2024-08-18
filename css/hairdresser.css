@@ -1,0 +1,329 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Theme Colors */
+:root {
+    --primary-color: #FF69B4; /* 明るいピンク */
+    --secondary-color: #800080; /* カッコいい紫色 */
+    --tertiary-color: #ADD8E6; /* 水色 */
+    --background-color: #fff; /* 白 */
+}
+
+/* Header */
+.header {
+    background-color: var(--secondary-color);
+    color: var(--background-color);
+    padding: 1rem;
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header__logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.header__nav {
+    display: flex;
+}
+
+.header__menu {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+.header__item a {
+    color: var(--background-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+
+/* MVセクションのスタイル */
+.mv-section {
+    width: 100%;
+    height: 400px; /* MVの高さを設定 */
+    overflow: hidden;
+    position: relative;
+}
+
+.mv-slider {
+    display: flex;
+    width: 500%; /* スライド全体の幅を設定 */
+    height: 100%;
+    animation: slide 25s infinite linear; /* アニメーション設定 */
+}
+
+.mv-slide {
+    width: 100%;
+    height: 100%;
+    flex: 1;
+}
+
+.mv-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* アニメーション定義 */
+/* @keyframes slide {
+    0% {
+        transform: translateX(0%);
+    }
+    33% {
+        transform: translateX(-100%);
+    }
+    66% {
+        transform: translateX(-200%);
+    }
+    100% {
+        transform: translateX(-300%);
+    }
+} */
+
+
+/* アニメーション定義 */
+@keyframes slide {
+    0% {
+        transform: translateX(-400%);
+    }
+    20% {
+        transform: translateX(-300%);
+    }
+    40% {
+        transform: translateX(-200%);
+    }
+    60% {
+        transform: translateX(-100%);
+    }
+    80% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+
+
+
+
+
+
+
+/* Sections */
+.section {
+    padding: 4rem 1rem;
+}
+
+.section--primary {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+}
+
+.section--secondary {
+    background-color: var(--tertiary-color);
+    color: var(--secondary-color);
+}
+
+.section__container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section__title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.section__description {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+/* Info Cards */
+.info-cards {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.info-card {
+    background-color: var(--background-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    text-align: center;
+    flex: 1;
+}
+
+.info-card__title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.info-card__description {
+    font-size: 1rem;
+}
+
+/* Product Cards */
+.product-cards {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.product-card {
+    background-color: var(--background-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    text-align: center;
+    flex: 1;
+}
+
+.product-card__name {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.product-card__price {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.product-card__description {
+    font-size: 1rem;
+}
+
+/* Contact Info */
+.contact-info {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.contact-info__item {
+    margin-bottom: 0.5rem;
+}
+
+.contact-info__item a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+/* スモークをぴんくにつける */
+/* スモーク（黒の透明度を調整） */
+.smoke-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); /* 30%の黒い透明色 */
+    z-index: 1;
+    pointer-events: none; /* クリックなどのイベントを無効化 */
+}
+
+/* ピンクを暗めに調整 */
+.section--primary {
+    background-color: #C71585; /* 落ち着いたピンク */
+    color: #fff;
+    position: relative;
+}
+
+.section--primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1); /* スモーク効果 */
+    z-index: 1;
+}
+
+.section__container {
+    position: relative;
+    z-index: 2; /* コンテンツをスモークの上に表示 */
+}
+
+/* 同様に、他のセクションにも暗みを加える */
+.section--secondary {
+    background-color: #4682B4; /* 落ち着いた水色 */
+    color: #fff;
+    position: relative;
+}
+
+.section--secondary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1); /* スモーク効果 */
+    z-index: 1;
+}
+
+.section__container {
+    position: relative;
+    z-index: 2; /* コンテンツをスモークの上に表示 */
+}
+
+
+
+
+
+
+/* Footer */
+.footer {
+    background-color: var(--secondary-color);
+    color: var(--background-color);
+    text-align: center;
+    padding: 1rem;
+}
+
+.footer__text {
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header__container,
+    .section__container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info-cards,
+    .product-cards {
+        flex-direction: column;
+    }
+}
