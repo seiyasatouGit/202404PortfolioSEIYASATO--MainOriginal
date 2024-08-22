@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+main {
+    padding: 1rem;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+h2 {
+    border-bottom: 2px solid #333;
+    padding-bottom: 0.5rem;
+}
+
+#job-list, #transaction-list {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 1rem;
+}
+
+.job-item, .transaction-item {
+    margin-bottom: 1rem;
+}
+
+.job-item:last-child, .transaction-item:last-child {
+    margin-bottom: 0;
+}
