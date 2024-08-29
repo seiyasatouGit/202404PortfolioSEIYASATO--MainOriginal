@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue-basicjsカスタマイズ</title>
+</head>
+<body>
+    <div id="app">
+        <form @submit.prevent="onSubmit">
+            <label for="name">名前:</label>
+            <input type="text" id="name" v-model="name">
+            <label for="message">メッセージ:</label>
+            <textarea id="message" v-model="message"></textarea>
+            <button type="submit">送信</button>
+        </form>
+
+        <div v-if="posts.length">
+            <h2>投稿一覧</h2>
+            <ul>
+                <li v-for="(post, index) in posts" :key="index">
+                    <strong>{{ post.name }}:</strong> {{ post.message }}
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script src="js/basic-vue-20240828.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results - MySearch</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #fff;
+        }
+        .result {
+            margin-bottom: 20px;
+        }
+        .result-title {
+            font-size: 24px;
+            color: #1a0dab;
+            text-decoration: none;
+        }
+        .result-url {
+            color: #006621;
+        }
+        .result-description {
+            color: #545454;
+        }
+    </style>
+</head>
+<body>
+    <h1>Search Results for: "<span id="query"></span>"</h1>
+    <div id="results">
+        <div class="result">
+            <a href="#" class="result-title">Example Result 1</a>
+            <div class="result-url">www.example.com</div>
+            <div class="result-description">This is a description of the first example result...</div>
+        </div>
+        <div class="result">
+            <a href="#" class="result-title">Example Result 2</a>
+            <div class="result-url">www.example.com</div>
+            <div class="result-description">This is a description of the second example result...</div>
+        </div>
+        <!-- 追加のフェイク検索結果をここに -->
+    </div>
+
+    <script>
+        // 検索ワードをURLから取得し、ページに表示する
+        const urlParams = new URLSearchParams(window.location.search);
+        const query = urlParams.get('query');
+        document.getElementById('query').innerText = query;
+    </script>
+</body>
+</html>

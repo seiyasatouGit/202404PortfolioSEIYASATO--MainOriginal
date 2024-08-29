@@ -15,7 +15,8 @@ body {
 
 .taskbar {
     background-color: #C0C0C0; /* タスクバーの背景色 */
-    padding: 4px;
+    /* padding: 4px; */
+    padding: 2px 5px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -23,6 +24,13 @@ body {
     border-left: 2px solid #FFFFFF;
     border-bottom: 2px solid #404040;
     border-right: 2px solid #404040;
+
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #C0C0C0;
+    border-top: 2px solid #404040;
+    width: 100%;
 }
 
 .taskbar__start {
@@ -33,10 +41,19 @@ body {
 .taskbar__start-button {
     background-color: #C0C0C0;
     color: black;
-    padding: 2px 8px;
+    /* padding: 2px 8px; */
+    padding: 5px;
     border: 2px solid #404040;
     font-weight: bold;
     cursor: pointer;
+
+    cursor: pointer;
+    font-size: 14px;
+}
+
+
+.taskbar__start-button:hover {
+    background-color: #A0A0A0;
 }
 
 .taskbar__tray {
@@ -45,8 +62,64 @@ body {
 }
 
 .taskbar__tray-item {
-    margin-left: 16px;
+    /* margin-left: 16px; */
+    font-size: 14px;
 }
+
+
+
+
+
+
+.start-menu {
+    position: absolute;
+    bottom: 40px; /* タスクバーの上に表示 */
+    left: 0;
+    width: 200px;
+    background-color: #C0C0C0;
+    border: 2px solid #404040;
+     /* 初期は非表示 */
+    display: none;
+    z-index: 10;
+}
+
+.start-menu__header {
+    background-color: #000080;
+    color: white;
+    padding: 5px;
+    font-size: 14px;
+    border-bottom: 2px solid #404040;
+}
+
+.start-menu__content {
+    padding: 5px;
+}
+
+.start-menu__list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.start-menu__item {
+    padding: 5px;
+    margin-bottom: 2px;
+    background-color: #E0E0E0;
+    border: 1px solid #404040;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.start-menu__item:hover {
+    background-color: #A0A0A0;
+}
+
+
+
+
+
+
+
 
 .desktop__icons {
     display: flex;
@@ -129,4 +202,25 @@ body {
     width: 200px;
     top: 200px;
     left: 250px;
+}
+
+
+
+
+
+
+
+
+
+/* 既存のCSSコード */
+        
+.google-icon img {
+    width: 24px;  /* アイコンのサイズ */
+    height: 24px;
+    cursor: pointer;
+    margin-left: 10px;  /* タスクバーの他の要素とのスペースを調整 */
+}
+
+.google-icon img:hover {
+    opacity: 0.8;  /* ホバー時のエフェクト */
 }

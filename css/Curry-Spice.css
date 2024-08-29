@@ -52,8 +52,18 @@ h2 {
     border: 2px solid #ffca28;
 }
 
+.photo-grid img:hover {
+    transform: scale(1.05);
+    filter: sepia(50%);
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+
 .flyer {
     text-align: center;
+
+    display: flex;
+    flex-direction: row;
 }
 
 .menu {
