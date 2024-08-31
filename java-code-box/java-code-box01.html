@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>コード説明ページ</title>
+    <link rel="stylesheet" href="css/java-code-box.css">
+
+</head>
+<body>
+
+<header>
+    <a href="../java-code.html">前のページに戻る</a>
+</header>
+
+<div class="container">
+    <div class="title">コード説明ページ</div>
+
+    <div class="section">
+        <h2>見出し1</h2>
+        <div class="code-container">
+            <pre class="code">
+<code>
+<span class="highlight-blue">import</span> sys
+<span class="highlight-purple">def</span> hello_world():
+    <span class="highlight-purple">print</span>("Hello, World!")
+</code>
+            </pre>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>見出し2</h2>
+        <div class="code-container">
+            <pre class="code">
+<code>
+<span class="highlight-blue">import</span> os
+<span class="highlight-purple">def</span> list_directory():
+    files = os.listdir(<span class="highlight-blue">'.'</span>)
+    <span class="highlight-purple">print</span>(files)
+</code>
+            </pre>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>見出し3</h2>
+        <div class="code-container">
+            <pre class="code">
+<code>
+<span class="highlight-blue">import</span> random
+<span class="highlight-purple">def</span> get_random_number():
+    number = random.randint(1, 10)
+    <span class="highlight-purple">print</span>(number)
+</code>
+            </pre>
+        </div>
+    </div>
+</div>
+
+<footer>
+    &copy; 2024 コード説明サイト
+</footer>
+
+</body>
+</html>
